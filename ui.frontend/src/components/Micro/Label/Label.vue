@@ -18,9 +18,21 @@ export default {
             type: Array,
             default: () => ['default']
         },
-        LabelContent: {
+        LabelTextContent: {
             type: String,
             default: 'Label'
+        },
+        LabelFontColor: {
+            type: String,
+            default: ''
+        },
+        LabelFontSize: {
+            type: String,
+            default: 16
+        },
+        LabelFontFamily: {
+            type: String,
+            default: 'Nunito'
         }
     }
 }
