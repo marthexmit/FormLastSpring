@@ -1,38 +1,31 @@
 <template>
-    <input 
-        :type="InputType" 
-        :value="InputValue" 
-        :class="InputClasses" 
+    <input
+        :type="InputType"
+        :value="InputValue"
         :placeholder="InputPlaceholder"
-        @input="getInputValue">
+        @input="getInputValue"/>
 </template>
 
 <script>
 export default {
+  // eslint-disable-next-line
     name: 'Label',
-    props: {
-        InputType: {
-            type: String,
-            default: 'text'
-        },
-        InputValue: {
-            type: String,
-            default: ''
-        },
-        InputClasses: {
-            type: Array,
-            default: () => ['default']
-        },
-        InputPlaceholder: {
-            type: String,
-            default: 'Type here'
-        }
+  props: {
+    InputType: {
+      type: String
     },
-    methods: {
-        getInputValue(e) {
-            console.log(e.target.value);
-        }
+    InputValue: {
+      type: String
+    },
+    InputPlaceholder: {
+      type: String
     }
+  },
+  methods: {
+    getInputValue (e) {
+      console.log(e.target.value)
+    }
+  }
 }
 </script>
 

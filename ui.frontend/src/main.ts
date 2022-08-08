@@ -4,12 +4,13 @@ import Vue from 'vue'
 import App from './App'
 import VueRouter from 'vue-router'
 import { Constants } from '@mavice/aem-vue-editable-components'
-
+import store from '../store'
 Vue.use(VueRouter)
 
 document.addEventListener('DOMContentLoaded', () => {
   ModelManager.initialize().then(pageModel => {
     new Vue({
+      store,
       router: new VueRouter({
         mode: 'history',
         routes: []

@@ -8,33 +8,29 @@
 
 <script>
 export default {
+  // eslint-disable-next-line
     name: 'Label',
-    props: {
-        ForInput: {
-            type: String,
-            default: ''
-        },
-        LabelClasses: {
-            type: Array,
-            default: () => ['default']
-        },
-        LabelTextContent: {
-            type: String,
-            default: 'Label'
-        },
-        LabelFontColor: {
-            type: String,
-            default: ''
-        },
-        LabelFontSize: {
-            type: String,
-            default: 16
-        },
-        LabelFontFamily: {
-            type: String,
-            default: 'Nunito'
-        }
+  props: {
+    ForInput: {
+      type: String
+    },
+    LabelClasses: {
+      type: Array,
+      default: () => ['default']
+    },
+    LabelTextContent: {
+      type: String
+    },
+    LabelFontColor: {
+      type: String
+    },
+    LabelFontSize: {
+      type: String
+    },
+    LabelFontFamily: {
+      type: String
     }
+  }
 }
 </script>
 

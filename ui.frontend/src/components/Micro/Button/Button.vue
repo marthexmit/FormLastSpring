@@ -1,5 +1,5 @@
 <template>
-  <button :style="{ 'font-family': fontFamilyButton, 'background-color': backColorButton, 'color': colorFieldButton}">{{ Btext }}</button>
+  <button :style="{ 'font-family': fontFamilyButton, 'background-color': backColorButton, 'color': colorFieldButton}" @click.prevent="event">{{ Btext }}</button>
 </template>
 
 <script>
@@ -17,6 +17,10 @@ export default {
     },
     colorFieldButton: {
       type: String
+    },
+    event: {
+      type: Function,
+      required: true
     }
   }
 }
