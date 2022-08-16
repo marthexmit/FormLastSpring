@@ -1,0 +1,103 @@
+{
+    "project-settings": {
+      "code-owner": "SPA Vue Project",
+      "bundle-path": "../core/src/main/java",
+      "test-path": "../core/src/test/java",
+      "apps-path": "../ui.apps/src/main/content/jcr_root/apps",
+      "component-path": "vue",
+      "model-interface-pkg": "com.vue.core.models",
+      "model-impl-pkg": "com.vue.core.models.impl"
+    },
+    "name": "headercomponent",
+    "title": "Header Component",
+    "group": "SPA Vue Project - Content",
+    "type": "components",
+    "options": {
+      "js": false,
+      "jstxt": false,
+      "css": false,
+      "csstxt": false,
+      "html": false,
+      "html-content": false,
+      "slingmodel": true,
+      "testclass": false,
+      "junit-major-version": 5,
+      "content-exporter": true,
+      "model-adaptables": [
+        "request"
+      ],
+      "generic-javadoc": false,
+      "properties-tabs":[
+        {
+          "id": "tabSupTitle",
+          "label": "Edit Sup Title",
+          "fields": ["headerType","headerText","headerFont","headerColor"
+        ]
+        },
+        {
+          "id": "tabBelowTitle",
+          "label": "Edit Below Title",
+          "fields": ["headerTypeTabs","headerTextTabs","headerFontTabs","headerColorTabs"
+        ]
+        }
+      ],
+      "properties": [
+        {
+          "field": "headerType",
+          "label": "Type Header",
+          "type": "textfield",
+          "json-expose": true,
+          "json-property": "headerType"
+        },
+        {
+          "field": "headerText",
+          "label": "Header Text",
+          "type": "textfield",
+          "json-expose": true,
+          "json-property": "headerText"
+        },
+        {
+          "field": "headerFont",
+          "label": "Header Font",
+          "type": "textfield",
+          "json-expose": true,
+          "json-property": "headerFont"
+        },
+        {
+            "field": "headerColor",
+            "label": "Header Color",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "headerColor"
+        },
+        {
+          "field": "headerTypeTabs",
+          "label": "Header Type",
+          "type": "textfield",
+          "json-expose": true,
+          "json-property": "headerTypeTabs"
+        },
+        {
+          "field": "headerTextTabs",
+          "label": "Header Text",
+          "type": "textfield",
+          "json-expose": true,
+          "json-property": "headerTextTabs"
+        },
+        {
+          "field": "headerFontTabs",
+          "label": "Header Font",
+          "type": "textfield",
+          "json-expose": true,
+          "json-property": "headerFontTabs"
+        },
+        {
+          "field": "headerColorTabs",
+          "label": "Header Color",
+          "type": "textfield",
+          "json-expose": true,
+          "json-property": "headerColorTabs"
+        }
+      ]
+    }
+  }

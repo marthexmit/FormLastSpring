@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ |  ***********************************************************************
+ |  SPA Vue Project CONFIDENTIAL
+ |  ___________________
+ |
+ |  Copyright 2022 SPA Vue Project
+ |  All Rights Reserved.
+ |
+ |  NOTICE:  All information contained herein is, and remains the property
+ |  of SPA Vue Project and its suppliers, if any. The intellectual and
+ |  technical concepts contained herein are proprietary to SPA Vue Project
+ |  and its suppliers and are protected by trade secret or copyright law.
+ |  Dissemination of this information or reproduction of this material
+ |  is strictly forbidden unless prior written permission is obtained
+ |  from SPA Vue Project.
+ |  ***********************************************************************
+-->
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Header Component"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+   <content jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+      <items jcr:primaryType="nt:unstructured">
+         <tabs jcr:primaryType="nt:unstructured"
+               sling:resourceType="granite/ui/components/coral/foundation/tabs">
+            <items jcr:primaryType="nt:unstructured">
+               <tabSupTitle jcr:primaryType="nt:unstructured"
+                            jcr:title="Edit Sup Title"
+                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                  <layout jcr:primaryType="nt:unstructured"
+                          sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+                  <items jcr:primaryType="nt:unstructured">
+                     <column jcr:primaryType="nt:unstructured"
+                             sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                           <headerType cq-msm-lockable="./headerType"
+                                       fieldLabel="Header Type"
+                                       jcr:primaryType="nt:unstructured"
+                                       name="./headerType"
+                                       sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <headerText cq-msm-lockable="./headerText"
+                                       fieldLabel="Header Text"
+                                       jcr:primaryType="nt:unstructured"
+                                       name="./headerText"
+                                       sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <headerFont cq-msm-lockable="./headerFont"
+                                       fieldLabel="Header Font"
+                                       jcr:primaryType="nt:unstructured"
+                                       name="./headerFont"
+                                       sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <headerColor cq-msm-lockable="./headerColor"
+                                        fieldLabel="Header Color"
+                                        jcr:primaryType="nt:unstructured"
+                                        name="./headerColor"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
+                        </items>
+                     </column>
+                  </items>
+               </tabSupTitle>
+               <tabBelowTitle jcr:primaryType="nt:unstructured"
+                              jcr:title="Edit Below Title"
+                              sling:resourceType="granite/ui/components/coral/foundation/container">
+                  <layout jcr:primaryType="nt:unstructured"
+                          sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+                  <items jcr:primaryType="nt:unstructured">
+                     <column jcr:primaryType="nt:unstructured"
+                             sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                           <headerTypeTabs cq-msm-lockable="./headerTypeTabs"
+                                           fieldLabel="Header Type"
+                                           jcr:primaryType="nt:unstructured"
+                                           name="./headerTypeTabs"
+                                           sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <headerTextTabs cq-msm-lockable="./headerTextTabs"
+                                           fieldLabel="Header Text"
+                                           jcr:primaryType="nt:unstructured"
+                                           name="./headerTextTabs"
+                                           sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <headerFontTabs cq-msm-lockable="./headerFontTabs"
+                                           fieldLabel="Header Font"
+                                           jcr:primaryType="nt:unstructured"
+                                           name="./headerFontTabs"
+                                           sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <headerColorTabs cq-msm-lockable="./headerColorTabs"
+                                            fieldLabel="Header Color"
+                                            jcr:primaryType="nt:unstructured"
+                                            name="./headerColorTabs"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
+                        </items>
+                     </column>
+                  </items>
+               </tabBelowTitle>
+            </items>
+         </tabs>
+      </items>
+   </content>
+</jcr:root>
