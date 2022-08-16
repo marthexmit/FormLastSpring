@@ -1,19 +1,15 @@
 <template>
-  <div class="box-terms">
-    <label class="terms">
-      <input
-        type="checkbox"
-        name="terms"
-        class="chk"
-        id="checkbox"
-        required
-        :checked="status"
-        @change="getValue"
-      />
-      <span class="geekmark"></span>
-      <span class="label-text">I accept the terms and privacy</span>
+  <div id="main-check">
+    <label class="container">I accept the terms and privacy
+
+      <div class="reverse">
+        <input type="checkbox" name="terms" class="chk" id="checkbox" required :checked="status" @change="getValue" />
+        <span class="check"></span>
+      </div>
     </label>
-    <small id="chkError" class="classSpan">Please confirm the terms</small>
+    <div id="validation-checkbox" style="display: none">
+      Please confirm the terms
+    </div>
   </div>
 </template>
 
