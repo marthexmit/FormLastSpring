@@ -4,7 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import VueRouter from 'vue-router'
 import { Constants } from '@mavice/aem-vue-editable-components'
-import store from '../store'
+import store from './store'
 Vue.use(VueRouter)
 
 document.addEventListener('DOMContentLoaded', () => {
