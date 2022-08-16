@@ -10,8 +10,16 @@ const store = new Store({
     actualTab: 'basic'
   },
   getters: {},
-  mutations: {},
-  actions: {},
+  mutations: {
+    changeActualTab (state, newTab) {
+      state.actualTab = newTab
+    }
+  },
+  actions: {
+    changeActualTab ({ commit }, newTab) {
+      commit('changeActualTab', newTab)
+    }
+  },
   modules: {}
 })
 
