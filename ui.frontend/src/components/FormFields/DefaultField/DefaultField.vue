@@ -1,14 +1,14 @@
 <template>
-  <div :style="{ width: fieldProps.FieldSize }">
-    <Label :ForInput="fieldProps.InputId">{{ fieldProps.LabelContent }}</label>
-    <TextComponent :newtext="fieldProps.InvalidText"/>
-
+  <div :style="{ width: FieldSize }" :class="FieldClass">
+    <Label :ForInput="InputId" :style="{ fontSize: LabelFontSize + 'px', color: LabelFontColor, fontFamily: FontType }">{{ LabelContent }}</Label>
+    <TextComponent :newtext="InvalidText" :style="{ fontFamily: FontType }"/>
     <Input
-      :InputType="fieldProps.InputType"
-      :InputPlaceholder="fieldProps.InputPlaceholder"
-      :InputId="fieldProps.InputId"
+      :InputType="InputType"
+      :InputPlaceholder="InputPlaceholder"
+      :InputId="InputId"
       @input="getValue"
-      :InputValue="fieldProps.InputValue"
+      :InputValue="InputValue"
+      :style="{ fontFamily: FontType }"
     />
   </div>
 </template>
@@ -25,8 +25,40 @@ export default {
     TextComponent
   },
   props: {
-    fieldProps: {
-      type: Object
+    FieldClass: {
+      type: String
+    },
+    FieldSize: {
+      type: String,
+      default: '100%'
+    },
+    InputType: {
+      type: String,
+      default: 'text'
+    },
+    InputId: {
+      type: String
+    },
+    InputPlaceholder: {
+      type: String,
+      default: 'Type here'
+    },
+    InvalidText: {
+      type: String,
+      default: 'Invalid'
+    },
+    LabelContent: {
+      type: String,
+      default: 'Label'
+    },
+    LabelFontSize: {
+      type: Number
+    },
+    LabelFontColor: {
+      type: String
+    },
+    FontType: {
+      type: String
     }
   }
 }

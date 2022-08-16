@@ -5,7 +5,12 @@
       <Menu />
 
       <template v-if="getActualTab === 'basic'">
-        <Basic :fields="BasicFields" />
+        <Basic    :FullNamePlaceholder="FullNamePlaceholder"
+                  :FullNameInvalid="FullNameInvalid"
+                  :FullNameLabelColor="FullNameLabelColor"
+                  :FullNameFontSize="FullNameFontSize"
+                  :FullNameLabel="FullNameLabel"
+                  :FullNameFontType="FullNameFontType" />
       </template>
 
       <template v-else-if="getActualTab === 'social'">
@@ -32,6 +37,96 @@ import Success from '@/components/Tabs/Success/Success.vue'
 export default {
   // eslint-disable-next-line
   name: "Tabs",
+  props: {
+    FullNameFontType: {
+      type: String,
+      default: 'Nunito'
+    },
+    FullNameFontSize: {
+      type: Number,
+      default: 16
+    },
+    FullNameLabelColor: {
+      type: String,
+      default: '#767676'
+    },
+    FullNamePlaceholder: {
+      type: String,
+      default: 'Foo Bar'
+    },
+    FullNameInvalidText: {
+      type: String,
+      default: 'Please enter your Name'
+    },
+    FullNameLabel: {
+      type: String,
+      default: 'Full Name'
+    },
+    NicknameFontType: {
+      type: String,
+      default: 'Nunito'
+    },
+    NicknameFontSize: {
+      type: Number,
+      default: 16
+    },
+    NicknameLabelColor: {
+      type: String,
+      default: '#767676'
+    },
+    NicknamePlaceholder: {
+      type: String,
+      default: 'Juanito'
+    },
+    NicknameLabel: {
+      type: String,
+      default: 'Nickname'
+    },
+    EmailFontType: {
+      type: String,
+      default: 'Nunito'
+    },
+    EmailFontSize: {
+      type: Number,
+      default: 16
+    },
+    EmailLabelColor: {
+      type: String,
+      default: '#767676'
+    },
+    EmailPlaceholder: {
+      type: String,
+      default: 'foo@bar.com'
+    },
+    EmailInvalidText: {
+      type: String,
+      default: 'Please enter your Email'
+    },
+    EmailLabel: {
+      type: String,
+      default: 'Email'
+    },
+    PhoneFontType: {
+      type: String,
+      default: 'Nunito'
+    },
+    PhoneFontSize: {
+      type: Number,
+      default: 16
+    },
+    PhoneLabelColor: {
+      type: String,
+      default: '#767676'
+    },
+    PhonePlaceholder: {
+      type: String,
+      default: '(83) 00000-0000'
+    },
+    PhoneLabel: {
+      type: String,
+      default: 'Phone'
+    }
+  },
   data () {
     return {
       actualTab: this.$store.state.actualTab,
