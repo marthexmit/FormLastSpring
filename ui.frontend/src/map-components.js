@@ -7,6 +7,7 @@ import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import Image from './components/Image/Image'
 import Main from './components/Main/Main'
+import Tabs from './components/Tabs/Tabs.vue'
 import headercomponent from './components/experienceFragments/header/header'
 import {
   withComponentMappingContext,
@@ -75,3 +76,5 @@ MapTo('vue/components/container')(
     }
   }
 )
+
+MapTo('vue/components/basic')(Tabs, EditConfig)
