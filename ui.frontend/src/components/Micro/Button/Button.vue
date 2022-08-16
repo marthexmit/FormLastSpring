@@ -1,5 +1,5 @@
 <template>
-  <button :style="{ 'font-family': fontFamilyButton, 'background-color': backColorButton, 'color': colorFieldButton}" @click.prevent="event">{{ Btext }}</button>
+  <button :style="{ 'font-family': fontFamilyButton, 'background-color': backColorButton, 'color': colorFieldButton}" v-on:click="clickButton">{{ Btext }}</button>
 </template>
 
 <script>
@@ -18,7 +18,7 @@ export default {
     colorFieldButton: {
       type: String
     },
-    event: {
+    clickButton: {
       type: Function,
       required: true
     }
