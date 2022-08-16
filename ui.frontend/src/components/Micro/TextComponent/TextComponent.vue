@@ -20,5 +20,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './TextComponent.scss'
+@import './TextComponent.scss';
 </style>
