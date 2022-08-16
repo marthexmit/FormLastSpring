@@ -7,6 +7,7 @@ import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import Image from './components/Image/Image'
 import Main from './components/Main/Main'
+import headercomponent from './components/experienceFragments/header/header'
 import {
   withComponentMappingContext,
   AllowedComponentsContainer,
@@ -26,6 +27,7 @@ const EditConfig = {
 /** *******************************************************************
               ↓  NEW COMPONENTS MAPPING COME HERE  ↓
 **********************************************************************/
+MapTo('vue/components/headercomponent')(headercomponent, EditConfig)
 
 MapTo('vue/components/customclasses')(CustomClasses, EditConfig)
 
