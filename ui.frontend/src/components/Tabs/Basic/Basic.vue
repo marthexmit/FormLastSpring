@@ -1,5 +1,5 @@
 <template>
-  <form>
+  <form @submit.prevent="">
     <DefaultField FieldClass="fullname"
                   InputType="text"
                   :InputPlaceholder="FullNamePlaceholder"
@@ -42,8 +42,10 @@
                   />
 
     <Birthday />
-    <Checkbox />
-    <!-- <Button btext="Next"/> -->
+    <fieldset class="form-footer">
+      <Checkbox />
+      <!-- <ButtonComponent Btext="Next"/> -->
+    </fieldset>
   </form>
 </template>
 
@@ -51,14 +53,14 @@
 import DefaultField from '@/components/FormFields/DefaultField/DefaultField.vue'
 import Checkbox from '@/components/FormFields/Checkbox/Checkbox.vue'
 import Birthday from '@/components/FormFields/Birthday/Birthday.vue'
-// import Button from '@/components/Micro/Button/Button.vue' // BOTÃO ESTÁ DANDO PROBLEMA
+// import ButtonComponent from '@/components/Micro/Button/Button.vue' // BOTÃO ESTÁ DANDO PROBLEMA
 export default {
   name: 'Basic',
   components: {
     Checkbox,
     DefaultField,
     Birthday
-    // Button
+    // ButtonComponent
   },
   props: {
     FullNameFontType: {
@@ -140,9 +142,6 @@ export default {
 }
 </script>
 
-<style scoped>
-form {
-  display: flex;
-  flex-wrap: wrap;
-}
+<style lang="scss" scoped>
+@import './Basic.scss';
 </style>

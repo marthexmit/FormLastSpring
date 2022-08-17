@@ -1,0 +1,12 @@
+form {
+    display: flex;
+    flex-wrap: wrap;
+    
+    .form-footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        border: none;
+        padding: 0;
+    }
+  }

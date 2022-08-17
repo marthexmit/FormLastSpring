@@ -1,50 +1,52 @@
 <template>
-  <div class="card">
-    <template v-if="actualTab !== 'success'">
-      <h2 class="teamSign">Team Sign Up</h2>
-      <Menu />
+  <main>
+    <div class="card">
+      <template v-if="actualTab !== 'success'">
+        <h2 class="teamSign">Team Sign Up</h2>
+        <Menu />
 
-      <template v-if="getActualTab === 'basic'">
-        <Basic
-                  :FullNameFontType="FullNameFontType"
-                  :FullNameFontSize="FullNameFontSize"
-                  :FullNameLabelColor="FullNameLabelColor"
-                  :FullNamePlaceholder="FullNamePlaceholder"
-                  :FullNameInvalidText="FullNameInvalidText"
-                  :FullNameLabel="FullNameLabel"
-                  :NicknameFontType="NicknameFontType"
-                  :NicknameFontSize="NicknameFontSize"
-                  :NicknameLabelColor="NicknameLabelColor"
-                  :NicknamePlaceholder="NicknamePlaceholder"
-                  :NicknameLabel="NicknameLabel"
-                  :EmailFontType="EmailFontType"
-                  :EmailFontSize="EmailFontSize"
-                  :EmailLabelColor="EmailLabelColor"
-                  :EmailPlaceholder="EmailPlaceholder"
-                  :EmailInvalidText="EmailInvalidText"
-                  :EmailLabel="EmailLabel"
-                  :PhoneFontType="PhoneFontType"
-                  :PhoneFontSize="PhoneFontSize"
-                  :PhoneLabelColor="PhoneLabelColor"
-                  :PhonePlaceholder="PhonePlaceholder"
-                  :PhoneLabel="PhoneLabel"
-                  />
-        <!-- <Basic /> -->
+        <template v-if="getActualTab === 'basic'">
+          <Basic
+                    :FullNameFontType="FullNameFontType"
+                    :FullNameFontSize="FullNameFontSize"
+                    :FullNameLabelColor="FullNameLabelColor"
+                    :FullNamePlaceholder="FullNamePlaceholder"
+                    :FullNameInvalidText="FullNameInvalidText"
+                    :FullNameLabel="FullNameLabel"
+                    :NicknameFontType="NicknameFontType"
+                    :NicknameFontSize="NicknameFontSize"
+                    :NicknameLabelColor="NicknameLabelColor"
+                    :NicknamePlaceholder="NicknamePlaceholder"
+                    :NicknameLabel="NicknameLabel"
+                    :EmailFontType="EmailFontType"
+                    :EmailFontSize="EmailFontSize"
+                    :EmailLabelColor="EmailLabelColor"
+                    :EmailPlaceholder="EmailPlaceholder"
+                    :EmailInvalidText="EmailInvalidText"
+                    :EmailLabel="EmailLabel"
+                    :PhoneFontType="PhoneFontType"
+                    :PhoneFontSize="PhoneFontSize"
+                    :PhoneLabelColor="PhoneLabelColor"
+                    :PhonePlaceholder="PhonePlaceholder"
+                    :PhoneLabel="PhoneLabel"
+                    />
+          <!-- <Basic /> -->
+        </template>
+
+        <template v-else-if="getActualTab === 'social'">
+          <Social />
+        </template>
+
+        <template v-else-if="getActualTab === 'certificates'">
+          <Certificates />
+        </template>
       </template>
 
-      <template v-else-if="getActualTab === 'social'">
-        <Social />
+      <template v-else-if="getActualTab === 'success'">
+        <Success />
       </template>
-
-      <template v-else-if="getActualTab === 'certificates'">
-        <Certificates />
-      </template>
-    </template>
-
-    <template v-else-if="getActualTab === 'success'">
-      <Success />
-    </template>
-  </div>
+    </div>
+  </main>
 </template>
 
 <script>
