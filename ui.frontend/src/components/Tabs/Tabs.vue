@@ -7,74 +7,74 @@
 
         <template v-if="getActualTab === 'basic'">
           <Basic
-                    :FullNameFontType="FullNameFontType"
-                    :FullNameFontSize="FullNameFontSize"
-                    :FullNameLabelColor="FullNameLabelColor"
-                    :FullNamePlaceholder="FullNamePlaceholder"
-                    :FullNameInvalidText="FullNameInvalidText"
-                    :FullNameLabel="FullNameLabel"
-                    :NicknameFontType="NicknameFontType"
-                    :NicknameFontSize="NicknameFontSize"
-                    :NicknameLabelColor="NicknameLabelColor"
-                    :NicknamePlaceholder="NicknamePlaceholder"
-                    :NicknameLabel="NicknameLabel"
-                    :EmailFontType="EmailFontType"
-                    :EmailFontSize="EmailFontSize"
-                    :EmailLabelColor="EmailLabelColor"
-                    :EmailPlaceholder="EmailPlaceholder"
-                    :EmailInvalidText="EmailInvalidText"
-                    :EmailLabel="EmailLabel"
-                    :PhoneFontType="PhoneFontType"
-                    :PhoneFontSize="PhoneFontSize"
-                    :PhoneLabelColor="PhoneLabelColor"
-                    :PhonePlaceholder="PhonePlaceholder"
-                    :PhoneLabel="PhoneLabel"
-                    />
+            :FullNameFontType="FullNameFontType"
+            :FullNameFontSize="FullNameFontSize"
+            :FullNameLabelColor="FullNameLabelColor"
+            :FullNamePlaceholder="FullNamePlaceholder"
+            :FullNameInvalidText="FullNameInvalidText"
+            :FullNameLabel="FullNameLabel"
+            :NicknameFontType="NicknameFontType"
+            :NicknameFontSize="NicknameFontSize"
+            :NicknameLabelColor="NicknameLabelColor"
+            :NicknamePlaceholder="NicknamePlaceholder"
+            :NicknameLabel="NicknameLabel"
+            :EmailFontType="EmailFontType"
+            :EmailFontSize="EmailFontSize"
+            :EmailLabelColor="EmailLabelColor"
+            :EmailPlaceholder="EmailPlaceholder"
+            :EmailInvalidText="EmailInvalidText"
+            :EmailLabel="EmailLabel"
+            :PhoneFontType="PhoneFontType"
+            :PhoneFontSize="PhoneFontSize"
+            :PhoneLabelColor="PhoneLabelColor"
+            :PhonePlaceholder="PhonePlaceholder"
+            :PhoneLabel="PhoneLabel"
+          />
           <!-- <Basic /> -->
         </template>
 
         <template v-else-if="getActualTab === 'social'">
           <Social
-                    :LinkedinFontType="LinkedinFontType"
-                    :LinkedinFontSize="LinkedinFontSize"
-                    :LinkedinLabelColor="LinkedinLabelColor"
-                    :LinkedinPlaceholder="LinkedinPlaceholder"
-                    :LinkedinLabel="LinkedinLabel"
-                    :GithubFontType="GithubFontType"
-                    :GithubFontSize="GithubFontSize"
-                    :GithubLabelColor="GithubLabelColor"
-                    :GithubPlaceholder="GithubPlaceholder"
-                    :GithubInvalidText="GithubInvalidText"
-                    :GithubLabel="GithubLabel"
-                    />
+            :LinkedinFontType="LinkedinFontType"
+            :LinkedinFontSize="LinkedinFontSize"
+            :LinkedinLabelColor="LinkedinLabelColor"
+            :LinkedinPlaceholder="LinkedinPlaceholder"
+            :LinkedinLabel="LinkedinLabel"
+            :GithubFontType="GithubFontType"
+            :GithubFontSize="GithubFontSize"
+            :GithubLabelColor="GithubLabelColor"
+            :GithubPlaceholder="GithubPlaceholder"
+            :GithubInvalidText="GithubInvalidText"
+            :GithubLabel="GithubLabel"
+          />
         </template>
 
         <template v-else-if="getActualTab === 'certificates'">
           <Certificates
-                    :CertificatesFontType="CertificatesFontType"
-                    :CertificatesFontSize="CertificatesFontSize"
-                    :CertificatesLabelColor="CertificatesLabelColor"
-                    :CertificatesPlaceholder="CertificatesPlaceholder"
-                    :CertificatesLabel="CertificatesLabel"
-                    :TeamNameFontType="TeamNameFontType"
-                    :TeamNameFontSize="TeamNameFontSize"
-                    :TeamNameLabelColor="TeamNameLabelColor"
-                    :TeamNamePlaceholder="TeamNamePlaceholder"
-                    :TeamNameInvalidText="TeamNameInvalidText"
-                    :TeamNameLabel="TeamNameLabel"
-                    :InstitutionFontType="InstitutionFontType"
-                    :InstitutionFontSize="InstitutionFontSize"
-                    :InstitutionLabelColor="InstitutionLabelColor"
-                    :InstitutionPlaceholder="InstitutionPlaceholder"
-                    :InstitutionInvalidText="InstitutionInvalidText"
-                    :InstitutionLabel="InstitutionLabel"
-                    :GraduationFontType="GraduationFontType"
-                    :GraduationFontSize="GraduationFontSize"
-                    :GraduationLabelColor="GraduationLabelColor"
-                    :GraduationPlaceholder="GraduationPlaceholder"
-                    :GraduationInvalidText="GraduationInvalidText"
-                    :GraduationLabel="GraduationLabel"
-                    />
+            :CertificatesFontType="CertificatesFontType"
+            :CertificatesFontSize="CertificatesFontSize"
+            :CertificatesLabelColor="CertificatesLabelColor"
+            :CertificatesPlaceholder="CertificatesPlaceholder"
+            :CertificatesLabel="CertificatesLabel"
+            :TeamNameFontType="TeamNameFontType"
+            :TeamNameFontSize="TeamNameFontSize"
+            :TeamNameLabelColor="TeamNameLabelColor"
+            :TeamNamePlaceholder="TeamNamePlaceholder"
+            :TeamNameInvalidText="TeamNameInvalidText"
+            :TeamNameLabel="TeamNameLabel"
+            :InstitutionFontType="InstitutionFontType"
+            :InstitutionFontSize="InstitutionFontSize"
+            :InstitutionLabelColor="InstitutionLabelColor"
+            :InstitutionPlaceholder="InstitutionPlaceholder"
+            :InstitutionInvalidText="InstitutionInvalidText"
+            :InstitutionLabel="InstitutionLabel"
+            :GraduationFontType="GraduationFontType"
+            :GraduationFontSize="GraduationFontSize"
+            :GraduationLabelColor="GraduationLabelColor"
+            :GraduationPlaceholder="GraduationPlaceholder"
+            :GraduationInvalidText="GraduationInvalidText"
+            :GraduationLabel="GraduationLabel"
+          />
         </template>
       </template>
 
@@ -94,7 +94,7 @@ import Certificates from '@/components/Tabs/Certificates/Certificates.vue'
 import Success from '@/components/Tabs/Success/Success.vue'
 export default {
   // eslint-disable-next-line
-  name: "Tabs",
+  name: 'Tabs',
   props: {
     FullNameFontType: {
       type: String,
@@ -342,5 +342,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./Tabs.scss";
+@import './Tabs.scss';
 </style>
