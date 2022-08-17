@@ -25,7 +25,7 @@
                   FieldSize="100%"
                    />
 
-    <ButtonComponent Btext="Next" :clickButton="nextTab" />
+    <ButtonComponent type="3" Btext="Next" :clickButton="nextTab" />
   </form>
 </template>
 

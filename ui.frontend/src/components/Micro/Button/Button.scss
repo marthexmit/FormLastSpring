@@ -1,4 +1,4 @@
-.BclassBasic {
+.BclassBasic, .BclassBasic3 {
     background-color: #074EE8;
     color: #FFFFFF;
     width: 83px;
@@ -14,4 +14,7 @@
 }
 .BclassBasic:hover {
 background: rgb(7 78 232 / 90%);
+}
+.BclassBasic3:hover {
+    background: rgb(7 78 232 / 90%);
 }
