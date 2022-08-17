@@ -1,25 +1,28 @@
 <template>
   <form @submit.prevent="">
-    <DefaultField FieldClass="fullname"
-                  InputType="text"
-                  :InputPlaceholder="FullNamePlaceholder"
-                  :InvalidText="FullNameInvalidText"
-                  :LabelFontColor="FullNameLabelColor"
-                  :LabelFontSize="FullNameFontSize"
-                  :LabelContent="FullNameLabel"
-                  :FontType="FullNameFontType"
-                  FieldSize="100%"
-                   />
-    <DefaultField FieldClass="nickname"
-                  InputType="text"
-                  :InputPlaceholder="NicknamePlaceholder"
-                  :InvalidText="NicknameInvalidText"
-                  :LabelFontColor="NicknameLabelColor"
-                  :LabelFontSize="NicknameFontSize"
-                  :LabelContent="NicknameLabel"
-                  :FontType="NicknameFontType"
-                  FieldSize="100%"
-                  />
+    <div id="divisionInputsSup">
+      <DefaultField FieldClass="fullname"
+                    InputType="text"
+                    :InputPlaceholder="FullNamePlaceholder"
+                    :InvalidText="FullNameInvalidText"
+                    :LabelFontColor="FullNameLabelColor"
+                    :LabelFontSize="FullNameFontSize"
+                    :LabelContent="FullNameLabel"
+                    :FontType="FullNameFontType"
+                    FieldSize="100%"
+                    />
+      <DefaultField FieldClass="nickname"
+                    InputType="text"
+                    :InputPlaceholder="NicknamePlaceholder"
+                    :InvalidText="NicknameInvalidText"
+                    :LabelFontColor="NicknameLabelColor"
+                    :LabelFontSize="NicknameFontSize"
+                    :LabelContent="NicknameLabel"
+                    :FontType="NicknameFontType"
+                    FieldSize="100%"
+                    />
+    </div>
+    <div id="divisionPhoneBirthday">
     <DefaultField FieldClass="email"
                   InputType="email"
                   :InputPlaceholder="EmailPlaceholder"
@@ -38,9 +41,9 @@
                   :LabelFontSize="PhoneFontSize"
                   :LabelContent="PhoneLabel"
                   :FontType="PhoneFontType"
-                  FieldSize="40%"
+                  FieldSize="33%"
                   />
-
+    </div>
     <Birthday />
     <fieldset class="form-footer">
       <Checkbox />
