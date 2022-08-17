@@ -1,12 +1,13 @@
 #divHeader{
     border-bottom: solid 2px #AAAAAA ;
-    height: 13.7vh;
-    width: 100%;
+    max-height: 15vh;
+    width: 100vw;
     background-color: #ECEEF2;
     .sectionTitle{
         display: flex;
         flex-direction: column;
-        height: 14vh;
+        max-height: 14vh;
+        width: 100vw;
     }
     
 }
