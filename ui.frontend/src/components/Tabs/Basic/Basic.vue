@@ -55,7 +55,7 @@
     <Birthday />
     <fieldset class="form-footer">
       <Checkbox />
-      <ButtonComponent Btext="Next" :clickButton="nextTab"/>
+      <ButtonComponent type="0" Btext="Next" :clickButton="nextTab" />
     </fieldset>
   </form>
 </template>
