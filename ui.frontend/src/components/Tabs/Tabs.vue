@@ -34,7 +34,19 @@
         </template>
 
         <template v-else-if="getActualTab === 'social'">
-          <Social />
+          <Social
+                    :LinkedinFontType="LinkedinFontType"
+                    :LinkedinFontSize="LinkedinFontSize"
+                    :LinkedinLabelColor="LinkedinLabelColor"
+                    :LinkedinPlaceholder="LinkedinPlaceholder"
+                    :LinkedinLabel="LinkedinLabel"
+                    :GithubFontType="GithubFontType"
+                    :GithubFontSize="GithubFontSize"
+                    :GithubLabelColor="GithubLabelColor"
+                    :GithubPlaceholder="GithubPlaceholder"
+                    :GithubInvalidText="GithubInvalidText"
+                    :GithubLabel="GithubLabel"
+                    />
         </template>
 
         <template v-else-if="getActualTab === 'certificates'">
@@ -147,6 +159,50 @@ export default {
     PhoneLabel: {
       type: String,
       default: 'Phone'
+    },
+    LinkedinFontType: {
+      type: String,
+      default: 'Nunito'
+    },
+    LinkedinFontSize: {
+      type: Number,
+      default: 16
+    },
+    LinkedinLabelColor: {
+      type: String,
+      default: '#767676'
+    },
+    LinkedinPlaceholder: {
+      type: String,
+      default: 'https://www.linkedin.com/in/foo-bar-3a0560104/'
+    },
+    LinkedinLabel: {
+      type: String,
+      default: 'Linkedin'
+    },
+    GithubFontType: {
+      type: String,
+      default: 'Nunito'
+    },
+    GithubFontSize: {
+      type: Number,
+      default: 16
+    },
+    GithubLabelColor: {
+      type: String,
+      default: '#767676'
+    },
+    GithubPlaceholder: {
+      type: String,
+      default: 'https://github.com/foobar'
+    },
+    GithubInvalidText: {
+      type: String,
+      default: 'Please enter your GitHub link'
+    },
+    GithubLabel: {
+      type: String,
+      default: 'GitHub'
     }
   },
   data () {
