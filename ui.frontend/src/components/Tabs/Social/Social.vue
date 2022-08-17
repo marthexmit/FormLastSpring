@@ -20,15 +20,20 @@
                   :FontType="GithubFontType"
                   FieldSize="100%"
                    />
+
+    <ButtonComponent Btext="Next" :clickButton="nextTab" />
   </form>
 </template>
 
 <script>
 import DefaultField from '@/components/FormFields/DefaultField/DefaultField.vue'
+import { mapActions } from 'vuex'
+import ButtonComponent from '@/components/Micro/Button/Button.vue'
 export default {
   name: 'Social',
   components: {
-    DefaultField
+    DefaultField,
+    ButtonComponent
   },
   props: {
     LinkedinFontType: {
@@ -67,6 +72,9 @@ export default {
     GithubLabel: {
       type: String
     }
+  },
+  methods: {
+    ...mapActions(['nextTab'])
   }
 }
 </script>

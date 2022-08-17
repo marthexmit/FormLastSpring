@@ -1,11 +1,11 @@
 <template>
   <div :style="{ width: FieldSize }" :class="FieldClass">
-    <Label :ForInput="InputId" :style="{ fontSize: LabelFontSize + 'px', color: LabelFontColor, fontFamily: FontType }">{{ LabelContent }}</Label>
+    <Label :style="{ fontSize: LabelFontSize + 'px', color: LabelFontColor, fontFamily: FontType }">{{ LabelContent }}</Label>
     <Span>{{ InvalidText }}</Span>
     <Input
       :InputType="InputType"
       :InputPlaceholder="InputPlaceholder"
-      :InputId="InputId"
+      :Storage="Storage"
       :InputValue="InputValue"
       :style="{ fontFamily: FontType }"
     />
@@ -35,7 +35,8 @@ export default {
       type: String,
       default: 'text'
     },
-    InputId: {
+    InputValue: String,
+    Storage: {
       type: String
     },
     InputPlaceholder: {
@@ -63,6 +64,5 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
 </style>

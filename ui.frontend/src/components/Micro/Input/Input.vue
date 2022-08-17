@@ -9,7 +9,7 @@
 <script>
 export default {
   // eslint-disable-next-line
-    name: 'Label',
+  name: 'Input',
   props: {
     InputType: {
       type: String
@@ -19,11 +19,12 @@ export default {
     },
     InputPlaceholder: {
       type: String
-    }
+    },
+    Storage: String
   },
   methods: {
     getInputValue (e) {
-      console.log(e.target.value)
+      localStorage.setItem(this.Storage, e.target.value)
     }
   }
 }

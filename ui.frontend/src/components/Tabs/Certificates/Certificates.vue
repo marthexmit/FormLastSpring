@@ -39,15 +39,19 @@
                   :FontType="GraduationFontType"
                   FieldSize="100%"
                    />
+    <ButtonComponent Btext="Next" :clickButton="nextTab" />
   </form>
 </template>
 
 <script>
 import DefaultField from '@/components/FormFields/DefaultField/DefaultField.vue'
+import ButtonComponent from '@/components/Micro/Button/Button.vue'
+import { mapActions } from 'vuex'
 export default {
   name: 'Certificates',
   components: {
-    DefaultField
+    DefaultField,
+    ButtonComponent
   },
   props: {
     CertificatesFontType: {
@@ -119,6 +123,9 @@ export default {
     InstitutionLabel: {
       type: String
     }
+  },
+  methods: {
+    ...mapActions(['nextTab'])
   }
 }
 </script>

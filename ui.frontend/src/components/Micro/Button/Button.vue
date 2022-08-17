@@ -1,5 +1,5 @@
 <template>
-  <button :style="{ 'font-family': fontFamilyButton, 'background-color': backColorButton, 'color': colorFieldButton}" v-on:click="clickButton">{{ Btext }}</button>
+  <button :style="{ 'font-family': fontFamilyButton, 'background-color': backColorButton, 'color': colorFieldButton}" @click.prevent="clickButton">{{ Btext }}</button>
 </template>
 
 <script>
