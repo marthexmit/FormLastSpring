@@ -4,13 +4,7 @@
 
 <script>
 export default {
-  name: 'Social',
-  props: {
-    fields: {
-      type: Array,
-      default: () => []
-    }
-  }
+  name: 'Social'
 }
 </script>
 

@@ -3,7 +3,7 @@
     <DefaultField FieldClass="fullname"
                   InputType="text"
                   :InputPlaceholder="FullNamePlaceholder"
-                  :InvalidText="FullNameInvalid"
+                  :InvalidText="FullNameInvalidText"
                   :LabelFontColor="FullNameLabelColor"
                   :LabelFontSize="FullNameFontSize"
                   :LabelContent="FullNameLabel"
@@ -13,7 +13,7 @@
     <DefaultField FieldClass="nickname"
                   InputType="text"
                   :InputPlaceholder="NicknamePlaceholder"
-                  :InvalidText="NicknameInvalid"
+                  :InvalidText="NicknameInvalidText"
                   :LabelFontColor="NicknameLabelColor"
                   :LabelFontSize="NicknameFontSize"
                   :LabelContent="NicknameLabel"
@@ -23,7 +23,7 @@
     <DefaultField FieldClass="email"
                   InputType="email"
                   :InputPlaceholder="EmailPlaceholder"
-                  :InvalidText="EmailInvalid"
+                  :InvalidText="EmailInvalidText"
                   :LabelFontColor="EmailLabelColor"
                   :LabelFontSize="EmailFontSize"
                   :LabelContent="EmailLabel"
@@ -33,15 +33,17 @@
     <DefaultField FieldClass="phone"
                   InputType="tel"
                   :InputPlaceholder="PhonePlaceholder"
-                  :InvalidText="PhoneInvalid"
+                  :InvalidText="PhoneInvalidText"
                   :LabelFontColor="PhoneLabelColor"
                   :LabelFontSize="PhoneFontSize"
                   :LabelContent="PhoneLabel"
                   :FontType="PhoneFontType"
-                  FieldSize="40%"/>
+                  FieldSize="40%"
+                  />
+
     <Birthday />
     <Checkbox />
-    <Button />
+    <!-- <Button btext="Next"/> -->
   </form>
 </template>
 
@@ -49,14 +51,14 @@
 import DefaultField from '@/components/FormFields/DefaultField/DefaultField.vue'
 import Checkbox from '@/components/FormFields/Checkbox/Checkbox.vue'
 import Birthday from '@/components/FormFields/Birthday/Birthday.vue'
-import Button from '@/components/Micro/Button/Button.vue'
+// import Button from '@/components/Micro/Button/Button.vue' // BOTÃO ESTÁ DANDO PROBLEMA
 export default {
   name: 'Basic',
   components: {
     Checkbox,
     DefaultField,
-    Birthday,
-    Button
+    Birthday
+    // Button
   },
   props: {
     FullNameFontType: {
@@ -95,9 +97,6 @@ export default {
     NicknameLabel: {
       type: String
     },
-    NicknameSize: {
-      type: String
-    },
     EmailFontType: {
       type: String
     },
@@ -114,9 +113,6 @@ export default {
       type: String
     },
     EmailLabel: {
-      type: String
-    },
-    EmailSize: {
       type: String
     },
     PhoneFontType: {
