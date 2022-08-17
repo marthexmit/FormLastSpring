@@ -1,9 +1,11 @@
 .birthday-container {
     width: 100%;
+    margin: 10px 60px 0px 56px;
 
     .labelBirthday {
         display: flex;
         align-items: center;
+        margin: 5px 0px 5px 0px;
         #errorBirthday {
             margin: 0.2em 0 0 1em;
         }

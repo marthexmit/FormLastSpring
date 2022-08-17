@@ -1,5 +1,5 @@
 <template>
-  <div :style="{ width: FieldSize }" :class="FieldClass">
+  <div :style="{ width: FieldSize }" :class="FieldClass + ' default'">
     <Label :ForInput="InputId" :style="{ fontSize: LabelFontSize + 'px', color: LabelFontColor, fontFamily: FontType }">{{ LabelContent }}</Label>
     <Span>{{ InvalidText }}</Span>
     <Input
@@ -63,6 +63,6 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+@import './DefaultField.scss'
 </style>
