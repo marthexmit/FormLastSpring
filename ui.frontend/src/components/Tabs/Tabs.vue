@@ -22,7 +22,6 @@
                     :PhonePlaceholder="PhonePlaceholder"
                     :PhoneLabel="PhoneLabel"
                     />
-          <!-- <Basic /> -->
         </template>
 
         <template v-else-if="getActualTab === 'social'">
@@ -76,7 +75,7 @@ import Certificates from '@/components/Tabs/Certificates/Certificates.vue'
 import Success from '@/components/Tabs/Success/Success.vue'
 export default {
   // eslint-disable-next-line
-  name: "Tabs",
+  name: 'Tabs',
   props: {
     FormTitle: {
       type: String,
@@ -98,18 +97,6 @@ export default {
       type: String,
       default: 'primary'
     },
-    FullNameFontType: {
-      type: String,
-      default: 'Nunito'
-    },
-    FullNameFontSize: {
-      type: Number,
-      default: 16
-    },
-    FullNameLabelColor: {
-      type: String,
-      default: '#767676'
-    },
     FullNamePlaceholder: {
       type: String,
       default: 'Foo Bar'
@@ -122,18 +109,6 @@ export default {
       type: String,
       default: 'Full Name'
     },
-    NicknameFontType: {
-      type: String,
-      default: 'Nunito'
-    },
-    NicknameFontSize: {
-      type: Number,
-      default: 16
-    },
-    NicknameLabelColor: {
-      type: String,
-      default: '#767676'
-    },
     NicknamePlaceholder: {
       type: String,
       default: 'Juanito'
@@ -141,18 +116,6 @@ export default {
     NicknameLabel: {
       type: String,
       default: 'Nickname'
-    },
-    EmailFontType: {
-      type: String,
-      default: 'Nunito'
-    },
-    EmailFontSize: {
-      type: Number,
-      default: 16
-    },
-    EmailLabelColor: {
-      type: String,
-      default: '#767676'
     },
     EmailPlaceholder: {
       type: String,
@@ -166,18 +129,6 @@ export default {
       type: String,
       default: 'Email'
     },
-    PhoneFontType: {
-      type: String,
-      default: 'Nunito'
-    },
-    PhoneFontSize: {
-      type: Number,
-      default: 16
-    },
-    PhoneLabelColor: {
-      type: String,
-      default: '#767676'
-    },
     PhonePlaceholder: {
       type: String,
       default: '(83) 00000-0000'
@@ -186,18 +137,6 @@ export default {
       type: String,
       default: 'Phone'
     },
-    LinkedinFontType: {
-      type: String,
-      default: 'Nunito'
-    },
-    LinkedinFontSize: {
-      type: Number,
-      default: 16
-    },
-    LinkedinLabelColor: {
-      type: String,
-      default: '#767676'
-    },
     LinkedinPlaceholder: {
       type: String,
       default: 'https://www.linkedin.com/in/foo-bar-3a0560104/'
@@ -205,18 +144,6 @@ export default {
     LinkedinLabel: {
       type: String,
       default: 'Linkedin'
-    },
-    GithubFontType: {
-      type: String,
-      default: 'Nunito'
-    },
-    GithubFontSize: {
-      type: Number,
-      default: 16
-    },
-    GithubLabelColor: {
-      type: String,
-      default: '#767676'
     },
     GithubPlaceholder: {
       type: String,
@@ -230,18 +157,6 @@ export default {
       type: String,
       default: 'GitHub'
     },
-    CertificatesFontType: {
-      type: String,
-      default: 'Nunito'
-    },
-    CertificatesFontSize: {
-      type: Number,
-      default: 16
-    },
-    CertificatesLabelColor: {
-      type: String,
-      default: '#767676'
-    },
     CertificatesPlaceholder: {
       type: String,
       default: 'https://www.linkedin.com/in/foo-bar-3a0560104/'
@@ -249,18 +164,6 @@ export default {
     CertificatesLabel: {
       type: String,
       default: 'Certificates'
-    },
-    GraduationFontType: {
-      type: String,
-      default: 'Nunito'
-    },
-    GraduationFontSize: {
-      type: Number,
-      default: 16
-    },
-    GraduationLabelColor: {
-      type: String,
-      default: '#767676'
     },
     GraduationPlaceholder: {
       type: String,
@@ -274,18 +177,6 @@ export default {
       type: String,
       default: 'Graduation'
     },
-    TeamNameFontType: {
-      type: String,
-      default: 'Nunito'
-    },
-    TeamNameFontSize: {
-      type: Number,
-      default: 16
-    },
-    TeamNameLabelColor: {
-      type: String,
-      default: '#767676'
-    },
     TeamNamePlaceholder: {
       type: String,
       default: 'https://www.linkedin.com/in/foo-bar-3a0560104/'
@@ -297,18 +188,6 @@ export default {
     TeamNameLabel: {
       type: String,
       default: 'Team Name'
-    },
-    InstitutionFontType: {
-      type: String,
-      default: 'Nunito'
-    },
-    InstitutionFontSize: {
-      type: Number,
-      default: 16
-    },
-    InstitutionLabelColor: {
-      type: String,
-      default: '#767676'
     },
     InstitutionPlaceholder: {
       type: String,
@@ -344,5 +223,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./Tabs.scss";
+@import './Tabs.scss';
 </style>
