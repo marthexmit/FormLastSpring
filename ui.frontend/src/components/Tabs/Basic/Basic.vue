@@ -3,6 +3,8 @@
     <div id="divisionInputsSup">
       <DefaultField FieldClass="fullname"
                     InputType="text"
+                    Storage="fullname"
+                    :InputValue="setInputValue('fullname')"
                     :InputPlaceholder="FullNamePlaceholder"
                     :InvalidText="FullNameInvalidText"
                     :LabelFontColor="FullNameLabelColor"
@@ -10,9 +12,11 @@
                     :LabelContent="FullNameLabel"
                     :FontType="FullNameFontType"
                     FieldSize="100%"
-                    />
+                     />
       <DefaultField FieldClass="nickname"
                     InputType="text"
+                    Storage="nickname"
+                    :InputValue="setInputValue('nickname')"
                     :InputPlaceholder="NicknamePlaceholder"
                     :InvalidText="NicknameInvalidText"
                     :LabelFontColor="NicknameLabelColor"
@@ -23,31 +27,35 @@
                     />
     </div>
     <div id="divisionPhoneBirthday">
-    <DefaultField FieldClass="email"
-                  InputType="email"
-                  :InputPlaceholder="EmailPlaceholder"
-                  :InvalidText="EmailInvalidText"
-                  :LabelFontColor="EmailLabelColor"
-                  :LabelFontSize="EmailFontSize"
-                  :LabelContent="EmailLabel"
-                  :FontType="EmailFontType"
-                  FieldSize="60%"
-                  />
-    <DefaultField FieldClass="phone"
-                  InputType="tel"
-                  :InputPlaceholder="PhonePlaceholder"
-                  :InvalidText="PhoneInvalidText"
-                  :LabelFontColor="PhoneLabelColor"
-                  :LabelFontSize="PhoneFontSize"
-                  :LabelContent="PhoneLabel"
-                  :FontType="PhoneFontType"
-                  FieldSize="33%"
-                  />
+      <DefaultField FieldClass="email"
+                    InputType="email"
+                    Storage="email"
+                    :InputValue="setInputValue('email')"
+                    :InputPlaceholder="EmailPlaceholder"
+                    :InvalidText="EmailInvalidText"
+                    :LabelFontColor="EmailLabelColor"
+                    :LabelFontSize="EmailFontSize"
+                    :LabelContent="EmailLabel"
+                    :FontType="EmailFontType"
+                    FieldSize="60%"
+                    />
+      <DefaultField FieldClass="phone"
+                    InputType="tel"
+                    Storage="phone"
+                    :InputValue="setInputValue('phone')"
+                    :InputPlaceholder="PhonePlaceholder"
+                    :InvalidText="PhoneInvalidText"
+                    :LabelFontColor="PhoneLabelColor"
+                    :LabelFontSize="PhoneFontSize"
+                    :LabelContent="PhoneLabel"
+                    :FontType="PhoneFontType"
+                    FieldSize="33%"
+                    />
     </div>
     <Birthday />
     <fieldset class="form-footer">
       <Checkbox />
-      <!-- <ButtonComponent Btext="Next"/> -->
+      <ButtonComponent Btext="Next" :clickButton="nextTab"/>
     </fieldset>
   </form>
 </template>
@@ -56,14 +64,15 @@
 import DefaultField from '@/components/FormFields/DefaultField/DefaultField.vue'
 import Checkbox from '@/components/FormFields/Checkbox/Checkbox.vue'
 import Birthday from '@/components/FormFields/Birthday/Birthday.vue'
-// import ButtonComponent from '@/components/Micro/Button/Button.vue' // BOTÃO ESTÁ DANDO PROBLEMA
+import { mapActions } from 'vuex'
+import ButtonComponent from '@/components/Micro/Button/Button.vue'
 export default {
   name: 'Basic',
   components: {
     Checkbox,
     DefaultField,
-    Birthday
-    // ButtonComponent
+    Birthday,
+    ButtonComponent
   },
   props: {
     FullNameFontType: {
@@ -140,6 +149,12 @@ export default {
     },
     PhoneSize: {
       type: String
+    }
+  },
+  methods: {
+    ...mapActions(['nextTab']),
+    setInputValue (field) {
+      return localStorage.getItem(field) ? localStorage.getItem(field) : ''
     }
   }
 }
