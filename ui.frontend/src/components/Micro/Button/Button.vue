@@ -1,5 +1,6 @@
 <template>
   <button  class="BclassBasic"  v-if="type === '0'" :style="{ 'font-family': fontFamilyButton, 'background-color': backColorButton, 'color': colorFieldButton}" @click.prevent="clickButton">{{ Btext }} <img src="/content/dam/vue/VectorSetaDireita.png" alt="next image" /></button>
+  <button  class="BclassSocial"  v-else-if="type === '1'" :style="{ 'font-family': fontFamilyButton, 'background-color': backColorButton, 'color': colorFieldButton}" @click.prevent="clickButton">{{ Btext }} <img src="/content/dam/vue/VectorSetaDireita.png" alt="next image" /></button>
 </template>
 
 <script>
