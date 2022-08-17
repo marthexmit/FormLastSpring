@@ -2,31 +2,23 @@
   <main>
     <div class="card">
       <template v-if="actualTab !== 'success'">
-        <h2 class="teamSign">Team Sign Up</h2>
+        <h2 class="teamSign">{{ FormTitle }}</h2>
         <Menu />
 
         <template v-if="getActualTab === 'basic'">
           <Basic
-                    :FullNameFontType="FullNameFontType"
-                    :FullNameFontSize="FullNameFontSize"
-                    :FullNameLabelColor="FullNameLabelColor"
+                    :FontType="FontType"
+                    :FontColor="FontColor"
+                    :FontSize="FontSize"
+                    :InputStyle="InputStyle"
                     :FullNamePlaceholder="FullNamePlaceholder"
                     :FullNameInvalidText="FullNameInvalidText"
                     :FullNameLabel="FullNameLabel"
-                    :NicknameFontType="NicknameFontType"
-                    :NicknameFontSize="NicknameFontSize"
-                    :NicknameLabelColor="NicknameLabelColor"
                     :NicknamePlaceholder="NicknamePlaceholder"
                     :NicknameLabel="NicknameLabel"
-                    :EmailFontType="EmailFontType"
-                    :EmailFontSize="EmailFontSize"
-                    :EmailLabelColor="EmailLabelColor"
                     :EmailPlaceholder="EmailPlaceholder"
                     :EmailInvalidText="EmailInvalidText"
                     :EmailLabel="EmailLabel"
-                    :PhoneFontType="PhoneFontType"
-                    :PhoneFontSize="PhoneFontSize"
-                    :PhoneLabelColor="PhoneLabelColor"
                     :PhonePlaceholder="PhonePlaceholder"
                     :PhoneLabel="PhoneLabel"
                     />
@@ -35,14 +27,12 @@
 
         <template v-else-if="getActualTab === 'social'">
           <Social
-                    :LinkedinFontType="LinkedinFontType"
-                    :LinkedinFontSize="LinkedinFontSize"
-                    :LinkedinLabelColor="LinkedinLabelColor"
+                    :FontType="FontType"
+                    :FontColor="FontColor"
+                    :FontSize="FontSize"
+                    :InputStyle="InputStyle"
                     :LinkedinPlaceholder="LinkedinPlaceholder"
                     :LinkedinLabel="LinkedinLabel"
-                    :GithubFontType="GithubFontType"
-                    :GithubFontSize="GithubFontSize"
-                    :GithubLabelColor="GithubLabelColor"
                     :GithubPlaceholder="GithubPlaceholder"
                     :GithubInvalidText="GithubInvalidText"
                     :GithubLabel="GithubLabel"
@@ -51,26 +41,18 @@
 
         <template v-else-if="getActualTab === 'certificates'">
           <Certificates
-                    :CertificatesFontType="CertificatesFontType"
-                    :CertificatesFontSize="CertificatesFontSize"
-                    :CertificatesLabelColor="CertificatesLabelColor"
+                    :FontType="FontType"
+                    :FontColor="FontColor"
+                    :FontSize="FontSize"
+                    :InputStyle="InputStyle"
                     :CertificatesPlaceholder="CertificatesPlaceholder"
                     :CertificatesLabel="CertificatesLabel"
-                    :TeamNameFontType="TeamNameFontType"
-                    :TeamNameFontSize="TeamNameFontSize"
-                    :TeamNameLabelColor="TeamNameLabelColor"
                     :TeamNamePlaceholder="TeamNamePlaceholder"
                     :TeamNameInvalidText="TeamNameInvalidText"
                     :TeamNameLabel="TeamNameLabel"
-                    :InstitutionFontType="InstitutionFontType"
-                    :InstitutionFontSize="InstitutionFontSize"
-                    :InstitutionLabelColor="InstitutionLabelColor"
                     :InstitutionPlaceholder="InstitutionPlaceholder"
                     :InstitutionInvalidText="InstitutionInvalidText"
                     :InstitutionLabel="InstitutionLabel"
-                    :GraduationFontType="GraduationFontType"
-                    :GraduationFontSize="GraduationFontSize"
-                    :GraduationLabelColor="GraduationLabelColor"
                     :GraduationPlaceholder="GraduationPlaceholder"
                     :GraduationInvalidText="GraduationInvalidText"
                     :GraduationLabel="GraduationLabel"
@@ -96,6 +78,26 @@ export default {
   // eslint-disable-next-line
   name: "Tabs",
   props: {
+    FormTitle: {
+      type: String,
+      default: 'Team Sign Up'
+    },
+    FontType: {
+      type: String,
+      default: 'Nunito'
+    },
+    FontColor: {
+      type: String,
+      default: '#767676'
+    },
+    FontSize: {
+      type: Number,
+      default: 16
+    },
+    InputStyle: {
+      type: String,
+      default: 'primary'
+    },
     FullNameFontType: {
       type: String,
       default: 'Nunito'

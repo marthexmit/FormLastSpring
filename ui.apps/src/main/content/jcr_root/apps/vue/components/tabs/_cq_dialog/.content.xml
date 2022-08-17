@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ |  ***********************************************************************
+ |  SPA Vue Project CONFIDENTIAL
+ |  ___________________
+ |
+ |  Copyright 2022 SPA Vue Project
+ |  All Rights Reserved.
+ |
+ |  NOTICE:  All information contained herein is, and remains the property
+ |  of SPA Vue Project and its suppliers, if any. The intellectual and
+ |  technical concepts contained herein are proprietary to SPA Vue Project
+ |  and its suppliers and are protected by trade secret or copyright law.
+ |  Dissemination of this information or reproduction of this material
+ |  is strictly forbidden unless prior written permission is obtained
+ |  from SPA Vue Project.
+ |  ***********************************************************************
+-->
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Vue - Form Tabs"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+   <content jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+      <items jcr:primaryType="nt:unstructured">
+         <tabs jcr:primaryType="nt:unstructured"
+               sling:resourceType="granite/ui/components/coral/foundation/tabs">
+            <items jcr:primaryType="nt:unstructured">
+               <general jcr:primaryType="nt:unstructured"
+                        jcr:title="Gerais"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                  <layout jcr:primaryType="nt:unstructured"
+                          sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+                  <items jcr:primaryType="nt:unstructured">
+                     <column jcr:primaryType="nt:unstructured"
+                             sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                           <FormTitle cq-msm-lockable="./FormTitle"
+                                      fieldLabel="Título do Formulário"
+                                      jcr:primaryType="nt:unstructured"
+                                      name="./FormTitle"
+                                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <FontType cq-msm-lockable="./FontType"
+                                     defaultValue="Nunito"
+                                     fieldLabel="Fonte para os textos do formulário"
+                                     jcr:primaryType="nt:unstructured"
+                                     name="./FontType"
+                                     sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                     value="Nunito">
+                              <items jcr:primaryType="nt:unstructured">
+                                 <nunito jcr:primaryType="nt:unstructured"
+                                         selected="true"
+                                         text="Nunito"
+                                         value="Nunito"/>
+                                 <montserrat jcr:primaryType="nt:unstructured"
+                                             text="Montserrat"
+                                             value="Montserrat"/>
+                                 <roboto jcr:primaryType="nt:unstructured" text="Roboto" value="Roboto"/>
+                              </items>
+                           </FontType>
+                           <FontColor cq-msm-lockable="./FontColor"
+                                      fieldLabel="Cor dos textos do formulário"
+                                      jcr:primaryType="nt:unstructured"
+                                      name="./FontColor"
+                                      sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
+                           <FontSize cq-msm-lockable="./FontSize"
+                                     fieldLabel="Tamanho dos textos do formulário"
+                                     jcr:primaryType="nt:unstructured"
+                                     max="{Double}32"
+                                     min="{Double}8"
+                                     name="./FontSize"
+                                     sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                     step="1"
+                                     value="{Long}16"/>
+                           <InputStyle cq-msm-lockable="./InputStyle"
+                                       defaultValue="primary"
+                                       fieldLabel="Estilo para os inputs do formulário"
+                                       jcr:primaryType="nt:unstructured"
+                                       name="./InputStyle"
+                                       sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                       value="primary">
+                              <items jcr:primaryType="nt:unstructured">
+                                 <primary jcr:primaryType="nt:unstructured"
+                                          selected="true"
+                                          text="Primário"
+                                          value="primary"/>
+                                 <secondary jcr:primaryType="nt:unstructured"
+                                            text="Secundário"
+                                            value="secondary"/>
+                                 <terciary jcr:primaryType="nt:unstructured" text="Terciário" value="terciary"/>
+                              </items>
+                           </InputStyle>
+                        </items>
+                     </column>
+                  </items>
+               </general>
+               <basic jcr:primaryType="nt:unstructured"
+                      jcr:title="Basic"
+                      sling:resourceType="granite/ui/components/coral/foundation/container">
+                  <layout jcr:primaryType="nt:unstructured"
+                          sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+                  <items jcr:primaryType="nt:unstructured">
+                     <column jcr:primaryType="nt:unstructured"
+                             sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured"/>
+                     </column>
+                  </items>
+               </basic>
+               <social jcr:primaryType="nt:unstructured"
+                       jcr:title="Social"
+                       sling:resourceType="granite/ui/components/coral/foundation/container">
+                  <layout jcr:primaryType="nt:unstructured"
+                          sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+                  <items jcr:primaryType="nt:unstructured">
+                     <column jcr:primaryType="nt:unstructured"
+                             sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured"/>
+                     </column>
+                  </items>
+               </social>
+               <certificates jcr:primaryType="nt:unstructured"
+                             jcr:title="Certificates"
+                             sling:resourceType="granite/ui/components/coral/foundation/container">
+                  <layout jcr:primaryType="nt:unstructured"
+                          sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+                  <items jcr:primaryType="nt:unstructured">
+                     <column jcr:primaryType="nt:unstructured"
+                             sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured"/>
+                     </column>
+                  </items>
+               </certificates>
+            </items>
+         </tabs>
+      </items>
+   </content>
+</jcr:root>

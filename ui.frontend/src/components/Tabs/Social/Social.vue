@@ -2,22 +2,26 @@
   <form>
     <DefaultField FieldClass="linkedin"
                   InputType="text"
+                  Storage="linkedin"
+                  :InputValue="setInputValue('linkedin')"
                   :InputPlaceholder="LinkedinPlaceholder"
                   :InvalidText="LinkedinInvalidText"
-                  :LabelFontColor="LinkedinLabelColor"
-                  :LabelFontSize="LinkedinFontSize"
+                  :FontColor="FontColor"
+                  :FontSize="FontSize"
+                  :FontType="FontType"
                   :LabelContent="LinkedinLabel"
-                  :FontType="LinkedinFontType"
                   FieldSize="100%"
                    />
     <DefaultField FieldClass="github"
                   InputType="text"
+                  Storage="github"
+                  :InputValue="setInputValue('github')"
                   :InputPlaceholder="GithubPlaceholder"
                   :InvalidText="GithubInvalidText"
-                  :LabelFontColor="GithubLabelColor"
-                  :LabelFontSize="GithubFontSize"
+                  :FontColor="FontColor"
+                  :FontSize="FontSize"
+                  :FontType="FontType"
                   :LabelContent="GithubLabel"
-                  :FontType="GithubFontType"
                   FieldSize="100%"
                    />
 
@@ -36,13 +40,13 @@ export default {
     ButtonComponent
   },
   props: {
-    LinkedinFontType: {
+    FontType: {
       type: String
     },
-    LinkedinFontSize: {
+    FontSize: {
       type: Number
     },
-    LinkedinLabelColor: {
+    FontColor: {
       type: String
     },
     LinkedinPlaceholder: {
@@ -52,15 +56,6 @@ export default {
       type: String
     },
     LinkedinLabel: {
-      type: String
-    },
-    GithubFontType: {
-      type: String
-    },
-    GithubFontSize: {
-      type: Number
-    },
-    GithubLabelColor: {
       type: String
     },
     GithubPlaceholder: {
@@ -74,7 +69,10 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['nextTab'])
+    ...mapActions(['nextTab']),
+    setInputValue (field) {
+      return localStorage.getItem(field) ? localStorage.getItem(field) : ''
+    }
   }
 }
 </script>

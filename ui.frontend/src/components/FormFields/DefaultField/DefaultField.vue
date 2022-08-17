@@ -1,13 +1,14 @@
 <template>
   <div :style="{ width: FieldSize }" :class="FieldClass + ' default'">
-    <Label :style="{ fontSize: LabelFontSize + 'px', color: LabelFontColor, fontFamily: FontType }">{{ LabelContent }}</Label>
-    <Span>{{ InvalidText }}</Span>
+    <Label :style="{ fontSize: FontSize + 'px', color: FontColor, fontFamily: FontType }">{{ LabelContent }}</Label>
+    <Span :style="{ fontFamily: FontType, fontSize: FontSize }">{{ InvalidText }}</Span>
     <Input
       :InputType="InputType"
       :InputPlaceholder="InputPlaceholder"
       :Storage="Storage"
       :InputValue="InputValue"
       :style="{ fontFamily: FontType }"
+      :InputClasses="InputStyle"
     />
   </div>
 </template>
@@ -51,19 +52,20 @@ export default {
       type: String,
       default: 'Label'
     },
-    LabelFontSize: {
+    FontSize: {
       type: Number
     },
-    LabelFontColor: {
+    FontColor: {
       type: String
     },
     FontType: {
       type: String
-    }
+    },
+    InputStyle: String
   }
 }
 </script>
 
 <style lang="scss" scoped>
-@import './DefaultField.scss'
+@import './DefaultField.scss';
 </style>
