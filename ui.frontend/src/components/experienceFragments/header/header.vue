@@ -2,10 +2,10 @@
      <div id="divHeader">
     <section class="sectionTitle">
       <Title :type="headerType"  smallTitle="smallTitle" :tMessage="headerText" :fontFamily="headerFont" :colorField="headerColor" />
-      <Title v-if="this.$store.state.actualTab === 'basic'"  :type="headerTypeTabs" blueTitle="blueTitle" :tMessage="headerTextTabs" :fontFamily="headerFontTabs" :colorField="headerColorTabs" />
-      <Title v-if="this.$store.state.actualTab === 'social'"  :type="headerTypeTabs" blueTitle="blueTitle" :tMessage="headerTextTabs" :fontFamily="headerFontTabs" :colorField="headerColorTabs" />
-      <Title v-if="this.$store.state.actualTab === 'certificates'"  :type="headerTypeTabs" blueTitle="blueTitle" :tMessage="headerTextTabs" :fontFamily="headerFontTabs" :colorField="headerColorTabs" />
-      <Title v-if="this.$store.state.actualTab === 'success'"  :type="headerTypeTabs" blueTitle="blueTitle" :tMessage="headerTextTabs" :fontFamily="headerFontTabs" :colorField="headerColorTabs" />
+      <Title v-if="$store.state.actualTab === 'basic'"  :type="headerTypeTabs" blueTitle="blueTitle" tMessage="First Tab" :fontFamily="headerFontTabs" :colorField="headerColorTabs" />
+      <Title v-else-if="$store.state.actualTab === 'social'"  :type="headerTypeTabs" blueTitle="blueTitle" tMessage="Second Tab" :fontFamily="headerFontTabs" :colorField="headerColorTabs" />
+      <Title v-else-if="$store.state.actualTab === 'certificates'"  :type="headerTypeTabs" blueTitle="blueTitle" tMessage="Third Tab" :fontFamily="headerFontTabs" :colorField="headerColorTabs" />
+      <Title v-else-if="$store.state.actualTab === 'success'"  :type="headerTypeTabs" blueTitle="blueTitle" tMessage="Success Tab" :fontFamily="headerFontTabs" :colorField="headerColorTabs" />
     </section>
   </div>
 </template>

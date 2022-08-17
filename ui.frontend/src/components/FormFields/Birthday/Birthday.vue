@@ -1,8 +1,8 @@
 <template>
     <div class="birthday-container">
         <div class="labelBirthday">
-            <Label>{{ fieldProps.LabelContent }}</Label>
-            <TextComponent text="Please enter your Age" className="mediumLowSize error" id="errorBirthday" />
+            <Label>Birthday</Label>
+            <!-- <TextComponent text="Please enter your Age" className="mediumLowSize error" id="errorBirthday" /> -->
         </div>
         <div class="datesBody">
             <div class="daySelect">
@@ -52,15 +52,13 @@
 
 <script>
 import Label from '@/components/Micro/Label/Label.vue'
-import TextComponent from '@/components/Micro/TextComponent/TextComponent.vue'
+// import TextComponent from '@/components/Micro/TextComponent/TextComponent.vue'
 export default {
   // eslint-disable-next-line
   name: "Birthday",
-  components: { Label, TextComponent },
-  props: {
-    fieldProps: {
-      type: Object
-    }
+  components: {
+    Label
+    // TextComponent
   },
   data () {
     return {

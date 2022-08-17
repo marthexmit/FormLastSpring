@@ -1,12 +1,11 @@
 <template>
   <div :style="{ width: FieldSize }" :class="FieldClass">
     <Label :ForInput="InputId" :style="{ fontSize: LabelFontSize + 'px', color: LabelFontColor, fontFamily: FontType }">{{ LabelContent }}</Label>
-    <TextComponent :newtext="InvalidText" :style="{ fontFamily: FontType }"/>
+    <Span>{{ InvalidText }}</Span>
     <Input
       :InputType="InputType"
       :InputPlaceholder="InputPlaceholder"
       :InputId="InputId"
-      @input="getValue"
       :InputValue="InputValue"
       :style="{ fontFamily: FontType }"
     />
@@ -16,13 +15,13 @@
 <script>
 import Label from '@/components/Micro/Label/Label.vue'
 import Input from '@/components/Micro/Input/Input.vue'
-import TextComponent from '@/components/Micro/TextComponent/TextComponent.vue'
+import Span from '@/components//Micro/Span/Span.vue'
 export default {
   name: 'DefaultField',
   components: {
     Label,
     Input,
-    TextComponent
+    Span
   },
   props: {
     FieldClass: {

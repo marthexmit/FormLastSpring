@@ -5,20 +5,39 @@
       <Menu />
 
       <template v-if="getActualTab === 'basic'">
-        <Basic    :FullNamePlaceholder="FullNamePlaceholder"
-                  :FullNameInvalid="FullNameInvalid"
-                  :FullNameLabelColor="FullNameLabelColor"
+        <Basic
+                  :FullNameFontType="FullNameFontType"
                   :FullNameFontSize="FullNameFontSize"
+                  :FullNameLabelColor="FullNameLabelColor"
+                  :FullNamePlaceholder="FullNamePlaceholder"
+                  :FullNameInvalidText="FullNameInvalidText"
                   :FullNameLabel="FullNameLabel"
-                  :FullNameFontType="FullNameFontType" />
+                  :NicknameFontType="NicknameFontType"
+                  :NicknameFontSize="NicknameFontSize"
+                  :NicknameLabelColor="NicknameLabelColor"
+                  :NicknamePlaceholder="NicknamePlaceholder"
+                  :NicknameLabel="NicknameLabel"
+                  :EmailFontType="EmailFontType"
+                  :EmailFontSize="EmailFontSize"
+                  :EmailLabelColor="EmailLabelColor"
+                  :EmailPlaceholder="EmailPlaceholder"
+                  :EmailInvalidText="EmailInvalidText"
+                  :EmailLabel="EmailLabel"
+                  :PhoneFontType="PhoneFontType"
+                  :PhoneFontSize="PhoneFontSize"
+                  :PhoneLabelColor="PhoneLabelColor"
+                  :PhonePlaceholder="PhonePlaceholder"
+                  :PhoneLabel="PhoneLabel"
+                  />
+        <!-- <Basic /> -->
       </template>
 
       <template v-else-if="getActualTab === 'social'">
-        <Social :fields="SocialFields" />
+        <Social />
       </template>
 
       <template v-else-if="getActualTab === 'certificates'">
-        <Certificates :fields="CertificatesFields"/>
+        <Certificates />
       </template>
     </template>
 
@@ -30,6 +49,7 @@
 
 <script>
 import Menu from '@/components/Menu/Menu.vue'
+import { mapActions } from 'vuex'
 import Social from '@/components/Tabs/Social/Social.vue'
 import Basic from '@/components/Tabs/Basic/Basic.vue'
 import Certificates from '@/components/Tabs/Certificates/Certificates.vue'
@@ -129,68 +149,7 @@ export default {
   },
   data () {
     return {
-      actualTab: this.$store.state.actualTab,
-      BasicFields: [
-        {
-          InputId: 'fullname',
-          InputType: 'text',
-          InputValue: '',
-          LabelContent: 'Full Name',
-          InvalidText: '',
-          InputPlaceholder: 'Foo Bar',
-          FieldSize: '50%'
-        },
-        {
-          InputId: 'nickname',
-          InputType: 'text',
-          LabelContent: 'Nickname',
-          InputValue: '',
-          InvalidText: 'Invalid',
-          InputPlaceholder: 'foo_bar',
-          FieldSize: '50%'
-        },
-        {
-          InputId: 'email',
-          InputType: 'email',
-          LabelContent: 'Email',
-          InputValue: '',
-          InvalidText: 'Invalid',
-          InputPlaceholder: 'foo@bar.com',
-          FieldSize: '40%'
-        },
-        {
-          InputId: 'phone',
-          InputType: 'tel',
-          LabelContent: 'Phone',
-          InputValue: '',
-          InvalidText: 'Invalid',
-          InputPlaceholder: '(00) 00000-0000',
-          FieldSize: '60%'
-        },
-        {
-          InputId: 'birthday',
-          InputType: 'birthday',
-          LabelContent: 'Birthday',
-          InputValue: '',
-          InvalidText: 'Invalid',
-          InputPlaceholder: '',
-          FieldSize: '100%'
-        }
-      ],
-      SocialFields: [
-        {
-          ForInput: 'linkedin',
-          InputType: 'text',
-          LabelContent: 'Linkedin',
-          InputPlaceholder: 'https://lindedin.com/in'
-        },
-        {
-          ForInput: 'github',
-          InputType: 'text',
-          LabelContent: 'GitHub',
-          InputPlaceholder: 'https://github.com/user'
-        }
-      ]
+      actualTab: this.$store.state.actualTab
     }
   },
   beforeUpdate () {
@@ -201,12 +160,9 @@ export default {
       return this.$store.state.actualTab
     }
   },
-  components: {
-    Menu,
-    Social,
-    Basic,
-    Certificates,
-    Success
+  components: { Menu, Social, Basic, Certificates, Success },
+  methods: {
+    ...mapActions(['nextTab'])
   }
 }
 </script>
