@@ -2,79 +2,60 @@
   <main>
     <div class="card">
       <template v-if="actualTab !== 'success'">
-        <h2 class="teamSign">Team Sign Up</h2>
+        <h2 class="teamSign">{{ FormTitle }}</h2>
         <Menu />
 
         <template v-if="getActualTab === 'basic'">
           <Basic
-            :FullNameFontType="FullNameFontType"
-            :FullNameFontSize="FullNameFontSize"
-            :FullNameLabelColor="FullNameLabelColor"
-            :FullNamePlaceholder="FullNamePlaceholder"
-            :FullNameInvalidText="FullNameInvalidText"
-            :FullNameLabel="FullNameLabel"
-            :NicknameFontType="NicknameFontType"
-            :NicknameFontSize="NicknameFontSize"
-            :NicknameLabelColor="NicknameLabelColor"
-            :NicknamePlaceholder="NicknamePlaceholder"
-            :NicknameLabel="NicknameLabel"
-            :EmailFontType="EmailFontType"
-            :EmailFontSize="EmailFontSize"
-            :EmailLabelColor="EmailLabelColor"
-            :EmailPlaceholder="EmailPlaceholder"
-            :EmailInvalidText="EmailInvalidText"
-            :EmailLabel="EmailLabel"
-            :PhoneFontType="PhoneFontType"
-            :PhoneFontSize="PhoneFontSize"
-            :PhoneLabelColor="PhoneLabelColor"
-            :PhonePlaceholder="PhonePlaceholder"
-            :PhoneLabel="PhoneLabel"
-          />
-          <!-- <Basic /> -->
+                    :FontType="FontType"
+                    :FontColor="FontColor"
+                    :FontSize="FontSize"
+                    :InputStyle="InputStyle"
+                    :FullNamePlaceholder="FullNamePlaceholder"
+                    :FullNameInvalidText="FullNameInvalidText"
+                    :FullNameLabel="FullNameLabel"
+                    :NicknamePlaceholder="NicknamePlaceholder"
+                    :NicknameLabel="NicknameLabel"
+                    :EmailPlaceholder="EmailPlaceholder"
+                    :EmailInvalidText="EmailInvalidText"
+                    :EmailLabel="EmailLabel"
+                    :PhonePlaceholder="PhonePlaceholder"
+                    :PhoneLabel="PhoneLabel"
+                    />
         </template>
 
         <template v-else-if="getActualTab === 'social'">
           <Social
-            :LinkedinFontType="LinkedinFontType"
-            :LinkedinFontSize="LinkedinFontSize"
-            :LinkedinLabelColor="LinkedinLabelColor"
-            :LinkedinPlaceholder="LinkedinPlaceholder"
-            :LinkedinLabel="LinkedinLabel"
-            :GithubFontType="GithubFontType"
-            :GithubFontSize="GithubFontSize"
-            :GithubLabelColor="GithubLabelColor"
-            :GithubPlaceholder="GithubPlaceholder"
-            :GithubInvalidText="GithubInvalidText"
-            :GithubLabel="GithubLabel"
-          />
+                    :FontType="FontType"
+                    :FontColor="FontColor"
+                    :FontSize="FontSize"
+                    :InputStyle="InputStyle"
+                    :LinkedinPlaceholder="LinkedinPlaceholder"
+                    :LinkedinLabel="LinkedinLabel"
+                    :GithubPlaceholder="GithubPlaceholder"
+                    :GithubInvalidText="GithubInvalidText"
+                    :GithubLabel="GithubLabel"
+                    />
         </template>
 
         <template v-else-if="getActualTab === 'certificates'">
           <Certificates
-            :CertificatesFontType="CertificatesFontType"
-            :CertificatesFontSize="CertificatesFontSize"
-            :CertificatesLabelColor="CertificatesLabelColor"
-            :CertificatesPlaceholder="CertificatesPlaceholder"
-            :CertificatesLabel="CertificatesLabel"
-            :TeamNameFontType="TeamNameFontType"
-            :TeamNameFontSize="TeamNameFontSize"
-            :TeamNameLabelColor="TeamNameLabelColor"
-            :TeamNamePlaceholder="TeamNamePlaceholder"
-            :TeamNameInvalidText="TeamNameInvalidText"
-            :TeamNameLabel="TeamNameLabel"
-            :InstitutionFontType="InstitutionFontType"
-            :InstitutionFontSize="InstitutionFontSize"
-            :InstitutionLabelColor="InstitutionLabelColor"
-            :InstitutionPlaceholder="InstitutionPlaceholder"
-            :InstitutionInvalidText="InstitutionInvalidText"
-            :InstitutionLabel="InstitutionLabel"
-            :GraduationFontType="GraduationFontType"
-            :GraduationFontSize="GraduationFontSize"
-            :GraduationLabelColor="GraduationLabelColor"
-            :GraduationPlaceholder="GraduationPlaceholder"
-            :GraduationInvalidText="GraduationInvalidText"
-            :GraduationLabel="GraduationLabel"
-          />
+                    :FontType="FontType"
+                    :FontColor="FontColor"
+                    :FontSize="FontSize"
+                    :InputStyle="InputStyle"
+                    :CertificatesPlaceholder="CertificatesPlaceholder"
+                    :CertificatesLabel="CertificatesLabel"
+                    :TeamNamePlaceholder="TeamNamePlaceholder"
+                    :TeamNameInvalidText="TeamNameInvalidText"
+                    :TeamNameLabel="TeamNameLabel"
+                    :InstitutionPlaceholder="InstitutionPlaceholder"
+                    :InstitutionInvalidText="InstitutionInvalidText"
+                    :InstitutionLabel="InstitutionLabel"
+                    :GraduationPlaceholder="GraduationPlaceholder"
+                    :GraduationInvalidText="GraduationInvalidText"
+                    :GraduationLabel="GraduationLabel"
+                    />
         </template>
       </template>
 
@@ -96,17 +77,25 @@ export default {
   // eslint-disable-next-line
   name: 'Tabs',
   props: {
-    FullNameFontType: {
+    FormTitle: {
+      type: String,
+      default: 'Team Sign Up'
+    },
+    FontType: {
       type: String,
       default: 'Nunito'
     },
-    FullNameFontSize: {
+    FontColor: {
+      type: String,
+      default: '#767676'
+    },
+    FontSize: {
       type: Number,
       default: 16
     },
-    FullNameLabelColor: {
+    InputStyle: {
       type: String,
-      default: '#767676'
+      default: 'primary'
     },
     FullNamePlaceholder: {
       type: String,
@@ -120,18 +109,6 @@ export default {
       type: String,
       default: 'Full Name'
     },
-    NicknameFontType: {
-      type: String,
-      default: 'Nunito'
-    },
-    NicknameFontSize: {
-      type: Number,
-      default: 16
-    },
-    NicknameLabelColor: {
-      type: String,
-      default: '#767676'
-    },
     NicknamePlaceholder: {
       type: String,
       default: 'Juanito'
@@ -139,18 +116,6 @@ export default {
     NicknameLabel: {
       type: String,
       default: 'Nickname'
-    },
-    EmailFontType: {
-      type: String,
-      default: 'Nunito'
-    },
-    EmailFontSize: {
-      type: Number,
-      default: 16
-    },
-    EmailLabelColor: {
-      type: String,
-      default: '#767676'
     },
     EmailPlaceholder: {
       type: String,
@@ -164,18 +129,6 @@ export default {
       type: String,
       default: 'Email'
     },
-    PhoneFontType: {
-      type: String,
-      default: 'Nunito'
-    },
-    PhoneFontSize: {
-      type: Number,
-      default: 16
-    },
-    PhoneLabelColor: {
-      type: String,
-      default: '#767676'
-    },
     PhonePlaceholder: {
       type: String,
       default: '(83) 00000-0000'
@@ -184,18 +137,6 @@ export default {
       type: String,
       default: 'Phone'
     },
-    LinkedinFontType: {
-      type: String,
-      default: 'Nunito'
-    },
-    LinkedinFontSize: {
-      type: Number,
-      default: 16
-    },
-    LinkedinLabelColor: {
-      type: String,
-      default: '#767676'
-    },
     LinkedinPlaceholder: {
       type: String,
       default: 'https://www.linkedin.com/in/foo-bar-3a0560104/'
@@ -203,18 +144,6 @@ export default {
     LinkedinLabel: {
       type: String,
       default: 'Linkedin'
-    },
-    GithubFontType: {
-      type: String,
-      default: 'Nunito'
-    },
-    GithubFontSize: {
-      type: Number,
-      default: 16
-    },
-    GithubLabelColor: {
-      type: String,
-      default: '#767676'
     },
     GithubPlaceholder: {
       type: String,
@@ -228,18 +157,6 @@ export default {
       type: String,
       default: 'GitHub'
     },
-    CertificatesFontType: {
-      type: String,
-      default: 'Nunito'
-    },
-    CertificatesFontSize: {
-      type: Number,
-      default: 16
-    },
-    CertificatesLabelColor: {
-      type: String,
-      default: '#767676'
-    },
     CertificatesPlaceholder: {
       type: String,
       default: 'https://www.linkedin.com/in/foo-bar-3a0560104/'
@@ -247,18 +164,6 @@ export default {
     CertificatesLabel: {
       type: String,
       default: 'Certificates'
-    },
-    GraduationFontType: {
-      type: String,
-      default: 'Nunito'
-    },
-    GraduationFontSize: {
-      type: Number,
-      default: 16
-    },
-    GraduationLabelColor: {
-      type: String,
-      default: '#767676'
     },
     GraduationPlaceholder: {
       type: String,
@@ -272,18 +177,6 @@ export default {
       type: String,
       default: 'Graduation'
     },
-    TeamNameFontType: {
-      type: String,
-      default: 'Nunito'
-    },
-    TeamNameFontSize: {
-      type: Number,
-      default: 16
-    },
-    TeamNameLabelColor: {
-      type: String,
-      default: '#767676'
-    },
     TeamNamePlaceholder: {
       type: String,
       default: 'https://www.linkedin.com/in/foo-bar-3a0560104/'
@@ -295,18 +188,6 @@ export default {
     TeamNameLabel: {
       type: String,
       default: 'Team Name'
-    },
-    InstitutionFontType: {
-      type: String,
-      default: 'Nunito'
-    },
-    InstitutionFontSize: {
-      type: Number,
-      default: 16
-    },
-    InstitutionLabelColor: {
-      type: String,
-      default: '#767676'
     },
     InstitutionPlaceholder: {
       type: String,

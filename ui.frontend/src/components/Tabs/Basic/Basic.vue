@@ -7,10 +7,10 @@
                     :InputValue="setInputValue('fullname')"
                     :InputPlaceholder="FullNamePlaceholder"
                     :InvalidText="FullNameInvalidText"
-                    :LabelFontColor="FullNameLabelColor"
-                    :LabelFontSize="FullNameFontSize"
+                    :FontColor="FontColor"
+                    :FontSize="FontSize"
+                    :FontType="FontType"
                     :LabelContent="FullNameLabel"
-                    :FontType="FullNameFontType"
                     FieldSize="100%"
                      />
       <DefaultField FieldClass="nickname"
@@ -19,10 +19,10 @@
                     :InputValue="setInputValue('nickname')"
                     :InputPlaceholder="NicknamePlaceholder"
                     :InvalidText="NicknameInvalidText"
-                    :LabelFontColor="NicknameLabelColor"
-                    :LabelFontSize="NicknameFontSize"
+                    :FontColor="FontColor"
+                    :FontSize="FontSize"
+                    :FontType="FontType"
                     :LabelContent="NicknameLabel"
-                    :FontType="NicknameFontType"
                     FieldSize="100%"
                     />
     </div>
@@ -33,10 +33,10 @@
                     :InputValue="setInputValue('email')"
                     :InputPlaceholder="EmailPlaceholder"
                     :InvalidText="EmailInvalidText"
-                    :LabelFontColor="EmailLabelColor"
-                    :LabelFontSize="EmailFontSize"
+                    :FontColor="FontColor"
+                    :FontSize="FontSize"
+                    :FontType="FontType"
                     :LabelContent="EmailLabel"
-                    :FontType="EmailFontType"
                     FieldSize="60%"
                     />
       <DefaultField FieldClass="phone"
@@ -45,10 +45,10 @@
                     :InputValue="setInputValue('phone')"
                     :InputPlaceholder="PhonePlaceholder"
                     :InvalidText="PhoneInvalidText"
-                    :LabelFontColor="PhoneLabelColor"
-                    :LabelFontSize="PhoneFontSize"
+                    :FontColor="FontColor"
+                    :FontSize="FontSize"
+                    :FontType="FontType"
                     :LabelContent="PhoneLabel"
-                    :FontType="PhoneFontType"
                     FieldSize="33%"
                     />
     </div>
@@ -75,15 +75,16 @@ export default {
     ButtonComponent
   },
   props: {
-    FullNameFontType: {
+    FontType: {
       type: String
     },
-    FullNameFontSize: {
+    FontSize: {
       type: Number
     },
-    FullNameLabelColor: {
+    FontColor: {
       type: String
     },
+    InputStyle: String,
     FullNamePlaceholder: {
       type: String
     },
@@ -91,15 +92,6 @@ export default {
       type: String
     },
     FullNameLabel: {
-      type: String
-    },
-    NicknameFontType: {
-      type: String
-    },
-    NicknameFontSize: {
-      type: Number
-    },
-    NicknameLabelColor: {
       type: String
     },
     NicknamePlaceholder: {
@@ -111,15 +103,6 @@ export default {
     NicknameLabel: {
       type: String
     },
-    EmailFontType: {
-      type: String
-    },
-    EmailFontSize: {
-      type: Number
-    },
-    EmailLabelColor: {
-      type: String
-    },
     EmailPlaceholder: {
       type: String
     },
@@ -129,15 +112,6 @@ export default {
     EmailLabel: {
       type: String
     },
-    PhoneFontType: {
-      type: String
-    },
-    PhoneFontSize: {
-      type: Number
-    },
-    PhoneLabelColor: {
-      type: String
-    },
     PhonePlaceholder: {
       type: String
     },
@@ -145,9 +119,6 @@ export default {
       type: String
     },
     PhoneLabel: {
-      type: String
-    },
-    PhoneSize: {
       type: String
     }
   },

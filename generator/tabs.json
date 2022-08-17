@@ -1,0 +1,173 @@
+{
+  "project-settings": {
+    "code-owner": "SPA Vue Project",
+    "bundle-path": "../core/src/main/java",
+    "test-path": "../core/src/test/java",
+    "apps-path": "../ui.apps/src/main/content/jcr_root/apps",
+    "component-path": "vue",
+    "model-interface-pkg": "com.vue.core.models",
+    "model-impl-pkg": "com.vue.core.models.impl"
+  },
+  "name": "tabs",
+  "title": "Vue - Form Tabs",
+  "group": "SPA Vue Project - Content",
+  "type": "components",
+  "options": {
+    "js": false,
+    "jstxt": false,
+    "css": false,
+    "csstxt": false,
+    "html": false,
+    "html-content": false,
+    "slingmodel": true,
+    "testclass": false,
+    "junit-major-version": 5,
+    "content-exporter": true,
+    "model-adaptables": [
+      "request"
+    ],
+    "generic-javadoc": false,
+    "properties-tabs": [
+      {
+        "id": "general",
+        "label": "Gerais",
+        "fields": [
+          "FormTitle",
+          "FontType",
+          "FontColor",
+          "FontSize",
+          "InputStyle"
+        ]
+      },
+      {
+        "id": "basic",
+        "label": "Basic",
+        "fields": [
+          "FirstField",
+          "SecondField",
+          "ThirdField",
+          "FourthField",
+          "FifthField"
+        ]
+      },
+      {
+        "id": "social",
+        "label": "Social",
+        "fields": [
+          "FirstField",
+          "SecondField",
+          "ThirdField"
+        ]
+      },
+      {
+        "id": "certificates",
+        "label": "Certificates",
+        "fields": [
+          "FirstField",
+          "SecondField",
+          "ThirdField",
+          "FourthField"
+        ]
+      }
+    ],
+    "properties": [
+      {
+        "field": "FormTitle",
+        "label": "Título do Formulário",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "FormTitle" 
+      },
+      {
+        "field": "FontType",
+        "type": "select",
+        "label": "Fonte para os textos do formulário",
+        "json-property": "FontType",
+        "json-expose": true,
+        "attributes": {
+          "defaultValue": "Nunito",
+          "value": "Nunito"
+        },
+        "items": [
+          {
+            "field": "nunito",
+            "attributes": {
+              "selected": "true",
+              "text": "Nunito",
+              "value": "Nunito"
+            }
+          },
+          {
+            "field": "montserrat",
+            "attributes": {
+              "text": "Montserrat",
+              "value": "Montserrat"
+            }
+          },
+          {
+            "field": "roboto",
+            "attributes": {
+              "text": "Roboto",
+              "value": "Roboto"
+            }
+          }
+        ]
+      },
+      {
+        "field": "FontColor",
+        "label": "Cor dos textos do formulário",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "FontColor" 
+      },
+      {
+        "field": "FontSize",
+        "label": "Tamanho dos textos do formulário",
+        "type": "numberfield",
+        "json-expose": true,
+        "json-property": "FontSize" ,
+        "attributes": {
+          "max": "{Double}32",
+          "min": "{Double}8",
+          "step": "1",
+          "value": "{Long}16"
+        } 
+      },
+      {
+        "field": "InputStyle",
+        "type": "select",
+        "label": "Estilo para os inputs do formulário",
+        "json-property": "InputStyle",
+        "json-expose": true,
+        "attributes": {
+          "defaultValue": "primary",
+          "value": "primary"
+        },
+        "items": [
+          {
+            "field": "primary",
+            "attributes": {
+              "selected": "true",
+              "text": "Primário",
+              "value": "primary"
+            }
+          },
+          {
+            "field": "secondary",
+            "attributes": {
+              "text": "Secundário",
+              "value": "secondary"
+            }
+          },
+          {
+            "field": "terciary",
+            "attributes": {
+              "text": "Terciário",
+              "value": "terciary"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -78,3 +78,4 @@ MapTo('vue/components/container')(
 )
 
 MapTo('vue/components/basic')(Tabs, EditConfig)
+MapTo('vue/components/tabs')(Tabs, EditConfig)

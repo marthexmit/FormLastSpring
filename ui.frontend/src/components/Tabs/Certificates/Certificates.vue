@@ -2,41 +2,49 @@
   <form>
     <DefaultField FieldClass="certificates"
                   InputType="text"
+                  Storage="certificates"
+                  :InputValue="setInputValue('certificates')"
                   :InputPlaceholder="CertificatesPlaceholder"
-                  :LabelFontColor="CertificatesLabelColor"
-                  :LabelFontSize="CertificatesFontSize"
+                  :FontColor="FontColor"
+                  :FontSize="FontSize"
+                  :FontType="FontType"
                   :LabelContent="CertificatesLabel"
-                  :FontType="CertificatesFontType"
                   FieldSize="100%"
                    />
     <DefaultField FieldClass="teamname"
                   InputType="text"
+                  Storage="teamname"
+                  :InputValue="setInputValue('teamname')"
                   :InputPlaceholder="TeamNamePlaceholder"
                   :InvalidText="TeamNameInvalidText"
-                  :LabelFontColor="TeamNameLabelColor"
-                  :LabelFontSize="TeamNameFontSize"
+                  :FontColor="FontColor"
+                  :FontSize="FontSize"
+                  :FontType="FontType"
                   :LabelContent="TeamNameLabel"
-                  :FontType="TeamNameFontType"
                   FieldSize="100%"
                    />
     <DefaultField FieldClass="institution"
                   InputType="text"
+                  Storage="teamname"
+                  :InputValue="setInputValue('teamname')"
                   :InputPlaceholder="InstitutionPlaceholder"
                   :InvalidText="InstitutionInvalidText"
-                  :LabelFontColor="InstitutionLabelColor"
-                  :LabelFontSize="InstitutionFontSize"
+                  :FontColor="FontColor"
+                  :FontSize="FontSize"
+                  :FontType="FontType"
                   :LabelContent="InstitutionLabel"
-                  :FontType="InstitutionFontType"
                   FieldSize="100%"
                    />
     <DefaultField FieldClass="graduation"
                   InputType="text"
+                  Storage="teamname"
+                  :InputValue="setInputValue('teamname')"
                   :InputPlaceholder="GraduationPlaceholder"
                   :InvalidText="GraduationInvalidText"
-                  :LabelFontColor="GraduationLabelColor"
-                  :LabelFontSize="GraduationFontSize"
+                  :FontColor="FontColor"
+                  :FontSize="FontSize"
+                  :FontType="FontType"
                   :LabelContent="GraduationLabel"
-                  :FontType="GraduationFontType"
                   FieldSize="100%"
                    />
     <ButtonComponent Btext="Next" :clickButton="nextTab" />
@@ -54,28 +62,19 @@ export default {
     ButtonComponent
   },
   props: {
-    CertificatesFontType: {
+    FontType: {
       type: String
     },
-    CertificatesFontSize: {
+    FontSize: {
       type: Number
     },
-    CertificatesLabelColor: {
+    FontColor: {
       type: String
     },
     CertificatesPlaceholder: {
       type: String
     },
     CertificatesLabel: {
-      type: String
-    },
-    GraduationFontType: {
-      type: String
-    },
-    GraduationFontSize: {
-      type: Number
-    },
-    GraduationLabelColor: {
       type: String
     },
     GraduationPlaceholder: {
@@ -87,15 +86,6 @@ export default {
     GraduationLabel: {
       type: String
     },
-    TeamNameFontType: {
-      type: String
-    },
-    TeamNameFontSize: {
-      type: Number
-    },
-    TeamNameLabelColor: {
-      type: String
-    },
     TeamNamePlaceholder: {
       type: String
     },
@@ -103,15 +93,6 @@ export default {
       type: String
     },
     TeamNameLabel: {
-      type: String
-    },
-    InstitutionFontType: {
-      type: String
-    },
-    InstitutionFontSize: {
-      type: Number
-    },
-    InstitutionLabelColor: {
       type: String
     },
     InstitutionPlaceholder: {
@@ -125,7 +106,10 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['nextTab'])
+    ...mapActions(['nextTab']),
+    setInputValue (field) {
+      return localStorage.getItem(field) ? localStorage.getItem(field) : ''
+    }
   }
 }
 </script>
