@@ -6,7 +6,7 @@ form {
 .divisionButtonsCertificate {
     display: flex;
     justify-content: space-between;
-    margin: 0px 50px 0px 55px;
+    padding: 0px 50px 0px 55px;
     width: 100%;
 
     .certificates {
@@ -43,10 +43,23 @@ form {
 }
 .DivisionCertificate {
     width: 100%;
-    margin: 0px 50px 0px 55px;
+    padding: 0px 50px 0px 55px;
 }
 .DivisionAfterCertificate {
     width: 100%;
-    margin: 17px 55px 0px 55px;
+    padding: 17px 55px 0px 55px;
 }
+}
+
+@media (max-width: 768px) {
+    .DivisionCertificate {
+        margin: 0px -50px 0px -55px;
+    }
+    .divisionButtonsCertificate {
+        margin: 17px -50px 0px -55px;
+    }
+    .DivisionAfterCertificate {
+        margin: 17px -50px 0px -55px;
+    }
+
 }
