@@ -2,7 +2,7 @@
   <form>
     <div class="divisionInputsSocial">
       <DefaultField FieldClass="linkedin"
-                    InputType="text"
+                  InputType="text"
                     Storage="linkedin"
                     :InputValue="setInputValue('linkedin')"
                     :InputPlaceholder="LinkedinPlaceholder"

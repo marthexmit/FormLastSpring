@@ -1,5 +1,6 @@
 <template>
   <form>
+    <div class="DivisionCertificate">
     <DefaultField FieldClass="certificates"
                   InputType="text"
                   Storage="certificates"
@@ -11,43 +12,50 @@
                   :LabelContent="CertificatesLabel"
                   FieldSize="100%"
                    />
-    <DefaultField FieldClass="teamname"
-                  InputType="text"
-                  Storage="teamname"
-                  :InputValue="setInputValue('teamname')"
-                  :InputPlaceholder="TeamNamePlaceholder"
-                  :InvalidText="TeamNameInvalidText"
-                  :FontColor="FontColor"
-                  :FontSize="FontSize"
-                  :FontType="FontType"
-                  :LabelContent="TeamNameLabel"
-                  FieldSize="100%"
-                   />
-    <DefaultField FieldClass="institution"
-                  InputType="text"
-                  Storage="teamname"
-                  :InputValue="setInputValue('teamname')"
-                  :InputPlaceholder="InstitutionPlaceholder"
-                  :InvalidText="InstitutionInvalidText"
-                  :FontColor="FontColor"
-                  :FontSize="FontSize"
-                  :FontType="FontType"
-                  :LabelContent="InstitutionLabel"
-                  FieldSize="100%"
-                   />
-    <DefaultField FieldClass="graduation"
-                  InputType="text"
-                  Storage="teamname"
-                  :InputValue="setInputValue('teamname')"
-                  :InputPlaceholder="GraduationPlaceholder"
-                  :InvalidText="GraduationInvalidText"
-                  :FontColor="FontColor"
-                  :FontSize="FontSize"
-                  :FontType="FontType"
-                  :LabelContent="GraduationLabel"
-                  FieldSize="100%"
-                   />
-    <ButtonComponent Btext="Next" :clickButton="nextTab" />
+    </div>
+    <div class="divisionButtonsCertificate">
+    <ButtonComponent type='4' Btext="Certificates" :clickButton="nextTab" />
+    <ButtonComponent type='3' Btext="More" :clickButton="nextTab" />
+    </div>
+    <div class="DivisionAfterCertificate">
+      <DefaultField FieldClass="teamname"
+                    InputType="text"
+                    Storage="teamname"
+                    :InputValue="setInputValue('teamname')"
+                    :InputPlaceholder="TeamNamePlaceholder"
+                    :InvalidText="TeamNameInvalidText"
+                    :FontColor="FontColor"
+                    :FontSize="FontSize"
+                    :FontType="FontType"
+                    :LabelContent="TeamNameLabel"
+                    FieldSize="100%"
+                    />
+      <DefaultField FieldClass="institution"
+                    InputType="text"
+                    Storage="teamname"
+                    :InputValue="setInputValue('teamname')"
+                    :InputPlaceholder="InstitutionPlaceholder"
+                    :InvalidText="InstitutionInvalidText"
+                    :FontColor="FontColor"
+                    :FontSize="FontSize"
+                    :FontType="FontType"
+                    :LabelContent="InstitutionLabel"
+                    FieldSize="100%"
+                    />
+      <DefaultField FieldClass="graduation"
+                    InputType="text"
+                    Storage="teamname"
+                    :InputValue="setInputValue('teamname')"
+                    :InputPlaceholder="GraduationPlaceholder"
+                    :InvalidText="GraduationInvalidText"
+                    :FontColor="FontColor"
+                    :FontSize="FontSize"
+                    :FontType="FontType"
+                    :LabelContent="GraduationLabel"
+                    FieldSize="100%"
+                    />
+      </div>
+    <ButtonComponent type='2' Btext="Finish" :clickButton="nextTab" />
   </form>
 </template>
 
@@ -115,4 +123,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import './Certificate.scss'
 </style>
