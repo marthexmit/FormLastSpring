@@ -9,7 +9,7 @@
     "model-impl-pkg": "com.vue.core.models.impl"
   },
   "name": "tabs",
-  "title": "Vue - Form Tabs",
+  "title": "Form",
   "group": "SPA Vue Project - Content",
   "type": "components",
   "options": {
@@ -30,50 +30,61 @@
     "properties-tabs": [
       {
         "id": "general",
-        "label": "Gerais",
+        "label": "General",
         "fields": [
           "FormTitle",
           "FontType",
           "FontColor",
           "FontSize",
-          "InputStyle"
+          "Btext",
+          "backColorButton",
+          "fontFamilyButton"
         ]
       },
       {
         "id": "basic",
         "label": "Basic",
         "fields": [
-          "FirstField",
-          "SecondField",
-          "ThirdField",
-          "FourthField",
-          "FifthField"
+          "FullNamePlaceholder",
+          "FullNameLabel",
+          "NicknamePlaceholder",
+          "NicknameLabel",
+          "EmailPlaceholder",
+          "EmailLabel",
+          "PhonePlaceholder",
+          "PhoneLabel"
+          
         ]
       },
       {
         "id": "social",
         "label": "Social",
         "fields": [
-          "FirstField",
-          "SecondField",
-          "ThirdField"
+          "LinkedinPlaceholder",
+          "LinkedinLabel",
+          "GithubPlaceholder",
+          "GithubLabel"
         ]
       },
       {
         "id": "certificates",
         "label": "Certificates",
         "fields": [
-          "FirstField",
-          "SecondField",
-          "ThirdField",
-          "FourthField"
+          "CertificatesPlaceholder",
+          "CertificatesLabel",
+          "TeamNamePlaceholder",
+          "TeamNameLabel",
+          "InstitutionPlaceholder",
+          "InstitutionLabel",
+          "GraduationPlaceholder",
+          "GraduationLabel"
         ]
       }
     ],
     "properties": [
       {
         "field": "FormTitle",
-        "label": "Título do Formulário",
+        "label": "Title Form Text",
         "type": "textfield",
         "json-expose": true,
         "json-property": "FormTitle" 
@@ -81,7 +92,7 @@
       {
         "field": "FontType",
         "type": "select",
-        "label": "Fonte para os textos do formulário",
+        "label": "Fonte Type",
         "json-property": "FontType",
         "json-expose": true,
         "attributes": {
@@ -115,14 +126,14 @@
       },
       {
         "field": "FontColor",
-        "label": "Cor dos textos do formulário",
+        "label": "Color Texts",
         "type": "textfield",
         "json-expose": true,
         "json-property": "FontColor" 
       },
       {
         "field": "FontSize",
-        "label": "Tamanho dos textos do formulário",
+        "label": "Fontsize Texts",
         "type": "numberfield",
         "json-expose": true,
         "json-property": "FontSize" ,
@@ -134,39 +145,144 @@
         } 
       },
       {
-        "field": "InputStyle",
-        "type": "select",
-        "label": "Estilo para os inputs do formulário",
-        "json-property": "InputStyle",
+        "field": "FullNamePlaceholder",
+        "label": "FullName Place Text",
+        "type": "textfield",
         "json-expose": true,
-        "attributes": {
-          "defaultValue": "primary",
-          "value": "primary"
-        },
-        "items": [
-          {
-            "field": "primary",
-            "attributes": {
-              "selected": "true",
-              "text": "Primário",
-              "value": "primary"
-            }
-          },
-          {
-            "field": "secondary",
-            "attributes": {
-              "text": "Secundário",
-              "value": "secondary"
-            }
-          },
-          {
-            "field": "terciary",
-            "attributes": {
-              "text": "Terciário",
-              "value": "terciary"
-            }
-          }
-        ]
+        "json-property": "FullNamePlaceholder"
+      },
+      {
+        "field": "FullNameLabel",
+        "label": "FullName Label Text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "FullNameLabel"
+      },
+      {
+        "field": "NicknamePlaceholder",
+        "label": "Nickname Place Text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "NicknamePlaceholder"
+      },
+      {
+        "field": "NicknameLabel",
+        "label": "Nickname Label Text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "NicknameLabel"
+      },
+      {
+        "field": "EmailPlaceholder",
+        "label": "Email Place Text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "EmailPlaceholder"
+      },
+      {
+        "field": "EmailLabel",
+        "label": "Email Label Text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "EmailLabel"
+      },
+      {
+        "field": "PhonePlaceholder",
+        "label": "Phone Place Text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "PhonePlaceholder"
+      },
+      {
+        "field": "PhoneLabel",
+        "label": "Phone Label Text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "PhoneLabel"
+      },
+      {
+        "field": "LinkedinPlaceholder",
+        "label": "Linkedin Place Text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "LinkedinPlaceholder"
+      },
+      {
+        "field": "LinkedinLabel",
+        "label": "Linkedin Label Text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "LinkedinLabel"
+      },
+      {
+        "field": "GithubPlaceholder",
+        "label": "Github Place Text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "GithubPlaceholder"
+      },
+      {
+        "field": "GithubLabel",
+        "label": "Github Label Text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "GithubLabel"
+      },
+      {
+        "field": "CertificatesPlaceholder",
+        "label": "Certificates Place Text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "CertificatesPlaceholder"
+      },
+      {
+        "field": "CertificatesLabel",
+        "label": "Certificates Label Text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "CertificatesLabel"
+      },
+      {
+        "field": "TeamNamePlaceholder",
+        "label": "TeamName Place Text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "TeamNamePlaceholder"
+      },
+      {
+        "field": "TeamNameLabel",
+        "label": "TeamName Label Text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "TeamNameLabel"
+      },
+      {
+        "field": "InstitutionPlaceholder",
+        "label": "Institution Place Text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "InstitutionPlaceholder"
+      },
+      {
+        "field": "InstitutionLabel",
+        "label": "Institution Label Text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "InstitutionLabel"
+      },
+      {
+        "field": "GraduationPlaceholder",
+        "label": "Graduation Place Text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "GraduationPlaceholder"
+      },
+      {
+        "field": "GraduationLabel",
+        "label": "Graduation Label Text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "GraduationLabel"
       }
     ]
   }
