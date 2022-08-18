@@ -1,4 +1,4 @@
-.BclassBasic,.BclassSocial,.BclassCertificates,.BclassCertificatesMore,.BclassCertificatesList {
+.BclassBasic,.BclassSocial,.BclassCertificates,.BclassCertificatesMore,.BclassCertificatesList,.BclassSuccess {
     background-color: #074EE8;
     color: #FFFFFF;
     
@@ -10,6 +10,10 @@
     border: none;
     cursor: pointer;
     outline: none;
+}
+.BclassSuccess {
+    width: 83px;
+    margin: 28px 48px 0px 0px;
 }
 .BclassBasic {
     width: 83px;
@@ -52,5 +56,8 @@ BclassCertificatesList {
     }
     .BclassCertificates{
         margin: 80px 2px 0px 0px;
+    }
+    .BclassSuccess {
+    margin: 47px 0px 0px 0px;
     }
   }
