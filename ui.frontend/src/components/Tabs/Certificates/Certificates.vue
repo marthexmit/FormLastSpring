@@ -139,7 +139,7 @@ export default {
       return localStorage.getItem(field) ? localStorage.getItem(field) : ''
     },
     addCertificate () {
-      if (Patterns['certificate'].test(localStorage.getItem('certificate')) && this.certificates.length < 5) {
+      if (Patterns.certificate.test(localStorage.getItem('certificate')) && this.certificates.length < 5) {
         this.certificates.push(localStorage.getItem('certificate'))
         localStorage.setItem('certificates', JSON.stringify(this.certificates))
         localStorage.setItem('certificate', '')
