@@ -26,7 +26,7 @@
                     FieldSize="100%"
                     />
     </div>
-    <div id="divisionPhoneBirthday">
+    <div id="divisionPhoneEmail">
       <DefaultField FieldClass="email"
                     InputType="email"
                     Storage="email"

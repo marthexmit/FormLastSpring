@@ -2,6 +2,10 @@ main {
   margin: 0;
   background-color: #ECEEF2;
   max-height: 87vh;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .card {
   display: flex;
