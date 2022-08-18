@@ -7,6 +7,8 @@
 </template>
 
 <script>
+import $ from 'jquery'
+import {} from 'jquery-mask-plugin'
 export default {
   // eslint-disable-next-line
   name: 'Input',
@@ -21,6 +23,11 @@ export default {
       type: String
     },
     Storage: String
+  },
+  mounted () {
+    if (this.InputType === 'tel') {
+      $('input[type="tel"]').mask('(00) 00000-0000')
+    }
   },
   methods: {
     getInputValue (e) {
