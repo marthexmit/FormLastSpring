@@ -63,7 +63,7 @@
                     FieldSize="100%"
                     />
       </div>
-    <ButtonComponent type='2' Btext="Finish" :clickButton="nextTab" />
+    <ButtonComponent type='2' Btext="Finish" :clickButton="validate" />
   </form>
 </template>
 
@@ -71,6 +71,7 @@
 import DefaultField from '@/components/FormFields/DefaultField/DefaultField.vue'
 import ButtonComponent from '@/components/Micro/Button/Button.vue'
 import { mapActions } from 'vuex'
+import Patterns from '@/Validations.js'
 export default {
   name: 'Certificates',
   components: {
@@ -146,6 +147,26 @@ export default {
     removeCertificate (i) {
       this.certificates = this.certificates.filter((data, index) => index !== i)
       localStorage.setItem('certificates', JSON.stringify(this.certificates))
+    },
+    validate () {
+      const invalids = ['teamname', 'institution', 'graduation'].filter((field) => {
+        const value = document.querySelector(`.${field} > input`).value
+        const error = document.querySelector(`.${field} > span`)
+        if (!Patterns[field].test(value)) {
+          return field
+        } else {
+          error.style.visibility = 'hidden'
+        }
+      })
+
+      if (invalids.length) {
+        invalids.filter((field) => {
+          const error = document.querySelector(`.${field} > span`)
+          error.style.visibility = 'visible'
+        })
+      } else {
+        this.nextTab()
+      }
     }
   }
 }

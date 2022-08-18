@@ -127,42 +127,57 @@ export default {
       return localStorage.getItem(field) ? localStorage.getItem(field) : ''
     },
     validate () {
-      const invalids = ['fullname', 'nickname', 'email', 'phone'].filter((field) => {
-        const value = document.querySelector(`.${field} > input`).value
-        const error = document.querySelector(`.${field} > span`)
-        if (!Patterns[field].test(value)) {
-          if (field === 'nickname' || field === 'phone') {
-            if (value !== '') {
-              return field
-            } else {
-              error.style.visibility = 'hidden'
-            }
+      const invalids = ['fullname', 'nickname', 'email', 'phone', 'birthday', 'checkbox'].filter((field) => {
+        if (field === 'birthday') {
+          const error = document.querySelector('.labelBirthday > span')
+          if (
+            localStorage.getItem('day') && localStorage.getItem('month') && localStorage.getItem('year')
+          ) {
+            error.style.visibility = 'hidden'
           } else {
+            error.style.visibility = 'visible'
             return field
           }
+        } else if (field === 'checkbox') {
+          const error = document.querySelector('#main-check > #validation-checkbox')
+          if (!JSON.parse(localStorage.getItem('terms'))) {
+            error.style.display = 'block'
+            error.children[0].style.visibility = 'visible'
+            return field
+          } else {
+            error.style.display = 'none'
+            error.children[0].style.visibility = 'hidden'
+          }
         } else {
-          error.style.visibility = 'hidden'
+          console.log('nem birthday nem checkbox')
+          const value = document.querySelector(`.${field} > input`).value
+          const error = document.querySelector(`.${field} > span`)
+          if (!Patterns[field].test(value)) {
+            if (field === 'nickname' || field === 'phone') {
+              if (value !== '') {
+                return field
+              } else {
+                error.style.visibility = 'hidden'
+              }
+            } else {
+              return field
+            }
+          } else {
+            error.style.visibility = 'hidden'
+          }
         }
       })
 
       if (invalids.length) {
-        invalids.filter((field) => {
-          const error = document.querySelector(`.${field} > span`)
-          error.style.visibility = 'visible'
+        invalids.forEach((field) => {
+          if (field !== 'birthday' && field !== 'checkbox') {
+            const error = document.querySelector(`.${field} > span`)
+            error.style.visibility = 'visible'
+          }
         })
       } else {
         this.nextTab()
       }
-
-      // const errors = ['fullname', 'nickname', 'email', 'phone'].forEach((field) => {
-      //   const value = document.querySelector(`.${field} > input`).value
-      //   const error = document.querySelector(`.${field} > span`)
-      //   if (!Patterns[field].test(value)) {
-      //     error.style.visibility = 'visible'
-      //   } else {
-      //     error.style.visibility = 'hidden'
-      //   }
-      // })
     }
   }
 }
