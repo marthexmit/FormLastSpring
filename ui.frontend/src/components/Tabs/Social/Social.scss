@@ -8,7 +8,13 @@ form {
 .divisionInputsSocial {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    margin: -25px 55px 165px 55px;
+    width: 81%;
+    padding: 0px 50px 218px 0px;
 }
+}
+@media (max-width: 768px) {
+    .divisionInputsSocial{
+        min-width: 100%;
+        margin: 0px -50px -88px 0px;
+    }
 }

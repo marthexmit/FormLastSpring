@@ -17,7 +17,7 @@
 }
 .BclassSocial {
     width: 83px;
-    margin: 0px 58px -8px 0px
+    margin: 0px 58px 18px 0px;
 }
 .BclassCertificates {
     width: 83px;
@@ -46,5 +46,8 @@ BclassCertificatesList {
 @media (max-width: 768px) {
     .BclassBasic{
         margin: 39px 0px 0px 0px;
+    }
+    .BclassSocial{
+        margin: 179px 2px 0px 0px
     }
   }

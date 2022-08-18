@@ -11,7 +11,6 @@
                     :FontSize="FontSize"
                     :FontType="FontType"
                     :LabelContent="LinkedinLabel"
-                    FieldSize="100%"
                     />
       <DefaultField FieldClass="github"
                     InputType="text"
@@ -23,7 +22,6 @@
                     :FontSize="FontSize"
                     :FontType="FontType"
                     :LabelContent="GithubLabel"
-                    FieldSize="100%"
                     />
     </div>
     <ButtonComponent type="1" Btext="Next" :clickButton="nextTab" />
