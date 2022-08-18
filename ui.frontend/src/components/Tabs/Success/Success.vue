@@ -1,35 +1,32 @@
 <template>
   <div class="success-container">
-    <TextComponent id="title" newtext="Your data has been sent successfully!" />
     <div class="success-content">
-      <p v-if="this.fullname !== ''">Full Name:</p>
-      <TextComponent v-if="this.fullname" :newtext="this.fullname" />
-      <p v-if="this.email">Email:</p>
-      <TextComponent v-if="this.email" :newtext="this.email" />
-      <p v-if="this.birthday">Birthday:</p>
-      <TextComponent v-if="this.birthday" :newtext="this.birthday"/>
-      <p v-if="this.age">Age:</p>
-      <TextComponent v-if="this.age" :newtext="this.age" />
-      <p v-if="this.github">Github:</p>
-      <TextComponent v-if="this.github" :newtext="this.github" />
-      <p v-if="this.certificates">Certificates:</p>
-      <TextComponent v-if="this.certificates" :newtext="this.certificates" />
-      <p v-if="this.teamname">TeamName:</p>
-      <TextComponent v-if="this.teamname" :newtext="this.teamname" />
-      <p v-if="this.institution">Institution:</p>
-      <TextComponent v-if="this.institution" :newtext="this.institution" />
-      <p v-if="this.graduation">Graduation:</p>
-      <TextComponent v-if="this.graduation" :newtext="this.graduation" />
+      <TextComponent id="title" newtext="Your data has been sent successfully!" />
+      <TextComponent v-if="this.fullname" cText='Full Name: ' :newtext="this.fullname" />
+      <TextComponent v-if="this.email" cText='Email: ' :newtext="this.email" />
+      <TextComponent v-if="this.birthday" cText='Birthday: ' :newtext="this.birthday"/>
+      <TextComponent v-if="this.age" cText="Age: " :newtext="this.age" />
+      <TextComponent v-if="this.github" cText="Github: " :newtext="this.github" />
+      <TextComponent v-if="this.certificates" cText="Certificates: " :newtext="this.certificates" />
+      <TextComponent v-if="this.teamname" cText="Teamname: " :newtext="this.teamname" />
+      <TextComponent v-if="this.institution" cText="Institution: " :newtext="this.institution" />
+      <TextComponent v-if="this.graduation" cText="Graduation: "  :newtext="this.graduation" />
+    </div>
+    <div class="Breturn">
+    <ButtonComponent type="5" Btext="Return" :clickButton="clearLocalStorage" />
     </div>
   </div>
+
 </template>
 
 <script>
 import TextComponent from '@/components/Micro/TextComponent/TextComponent.vue'
+import ButtonComponent from '@/components/Micro/Button/Button.vue'
 export default {
   name: 'Social',
   components: {
-    TextComponent
+    TextComponent,
+    ButtonComponent
   },
   data () {
     return {
@@ -38,28 +35,22 @@ export default {
       birthday: [localStorage.getItem('day'), localStorage.getItem('month'), localStorage.getItem('year')].join('/'),
       age: localStorage.getItem('age'),
       github: localStorage.getItem('github'),
-      certificates: localStorage.getItem('certificates'),
+      certificates: JSON.parse(localStorage.getItem('certificates')),
       teamname: localStorage.getItem('teamname'),
       institution: localStorage.getItem('institution'),
       graduation: localStorage.getItem('graduation')
+    }
+  },
+  methods: {
+    clearLocalStorage () {
+      localStorage.clear()
+      this.$store.state.abledTabs = ['basic']
+      this.$store.state.actualTab = 'basic'
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-#title {
-  text-align: center;
-}
-
-.success-content {
-  display: grid;
-  grid-template-columns: 25% 75%;
-  row-gap: 10px;
-
-  p {
-    margin: 0;
-  }
-}
-
+@import './Success.scss';
 </style>
