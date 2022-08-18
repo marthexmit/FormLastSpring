@@ -42,3 +42,9 @@ BclassCertificatesList {
     height: 11px;
     width: 12px;
 }
+
+@media (max-width: 768px) {
+    .BclassBasic{
+        margin: 39px 0px 0px 0px;
+    }
+  }

@@ -1,7 +1,6 @@
 form {
     display: flex;
     flex-wrap: wrap;
-    
     .form-footer {
         width: 100%;
         display: flex;
@@ -10,6 +9,12 @@ form {
         padding: 0;
     }
   }
+.email {
+    width: 60%;
+}
+.phone {
+    width: 33%;
+}
 #divisionPhoneEmail {
     display: flex;
     justify-content: space-between;
@@ -20,3 +25,19 @@ form {
     width: 100%;
     margin: 0px 55px 0px 55px;
 }
+@media (max-width: 768px) {
+    #divisionInputsSup {
+        margin: 0px;
+    }
+    #divisionPhoneEmail {
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+    }
+    #emailTeste{
+        width: 100%;
+    }
+    .phone, .email{
+        width: 100%;
+    }
+  }
