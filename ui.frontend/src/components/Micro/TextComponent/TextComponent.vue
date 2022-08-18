@@ -1,5 +1,5 @@
 <template>
-  <p :style="{ 'font-family': fontFamilyText, 'color': colorFieldText,}">{{ newtext }}</p>
+  <p :style="{ 'font-family': fontFamilyText, 'color': colorFieldText }">{{ newtext }}</p>
 </template>
 
 <script>
