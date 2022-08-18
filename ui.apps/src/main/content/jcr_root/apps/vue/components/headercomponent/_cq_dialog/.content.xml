@@ -43,7 +43,16 @@
                                        fieldLabel="Header Type"
                                        jcr:primaryType="nt:unstructured"
                                        name="./headerType"
-                                       sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                       sling:resourceType="granite/ui/components/coral/foundation/form/select">
+                              <items jcr:primaryType="nt:unstructured">
+                                 <h1 jcr:primaryType="nt:unstructured" text="h1" value="h1"/>
+                                 <h2 jcr:primaryType="nt:unstructured" text="h2" value="h2"/>
+                                 <h3 jcr:primaryType="nt:unstructured" text="h3" value="h3"/>
+                                 <h4 jcr:primaryType="nt:unstructured" text="h4" value="h4"/>
+                                 <h5 jcr:primaryType="nt:unstructured" text="h5" value="h5"/>
+                                 <h6 jcr:primaryType="nt:unstructured" text="h6" value="h6"/>
+                              </items>
+                           </headerType>
                            <headerText cq-msm-lockable="./headerText"
                                        fieldLabel="Header Text"
                                        jcr:primaryType="nt:unstructured"
@@ -53,7 +62,15 @@
                                        fieldLabel="Header Font"
                                        jcr:primaryType="nt:unstructured"
                                        name="./headerFont"
-                                       sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                       sling:resourceType="granite/ui/components/coral/foundation/form/select">
+                              <items jcr:primaryType="nt:unstructured">
+                                 <Incosolata jcr:primaryType="nt:unstructured"
+                                             text="Incosolata"
+                                             value="Incosolata"/>
+                                 <Nunito jcr:primaryType="nt:unstructured" text="Nunito" value="Nunito"/>
+                                 <Inter jcr:primaryType="nt:unstructured" text="Inter" value="Inter"/>
+                              </items>
+                           </headerFont>
                            <headerColor cq-msm-lockable="./headerColor"
                                         fieldLabel="Header Color"
                                         jcr:primaryType="nt:unstructured"
@@ -76,17 +93,29 @@
                                            fieldLabel="Header Type"
                                            jcr:primaryType="nt:unstructured"
                                            name="./headerTypeTabs"
-                                           sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
-                           <headerTextTabs cq-msm-lockable="./headerTextTabs"
-                                           fieldLabel="Header Text"
-                                           jcr:primaryType="nt:unstructured"
-                                           name="./headerTextTabs"
-                                           sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                           sling:resourceType="granite/ui/components/coral/foundation/form/select">
+                              <items jcr:primaryType="nt:unstructured">
+                                 <h1 jcr:primaryType="nt:unstructured" text="h1" value="h1"/>
+                                 <h2 jcr:primaryType="nt:unstructured" text="h2" value="h2"/>
+                                 <h3 jcr:primaryType="nt:unstructured" text="h3" value="h3"/>
+                                 <h4 jcr:primaryType="nt:unstructured" text="h4" value="h4"/>
+                                 <h5 jcr:primaryType="nt:unstructured" text="h5" value="h5"/>
+                                 <h6 jcr:primaryType="nt:unstructured" text="h6" value="h6"/>
+                              </items>
+                           </headerTypeTabs>
                            <headerFontTabs cq-msm-lockable="./headerFontTabs"
                                            fieldLabel="Header Font"
                                            jcr:primaryType="nt:unstructured"
                                            name="./headerFontTabs"
-                                           sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                                           sling:resourceType="granite/ui/components/coral/foundation/form/select">
+                              <items jcr:primaryType="nt:unstructured">
+                                 <Incosolata jcr:primaryType="nt:unstructured"
+                                             text="Incosolata"
+                                             value="Incosolata"/>
+                                 <Nunito jcr:primaryType="nt:unstructured" text="Nunito" value="Nunito"/>
+                                 <Inter jcr:primaryType="nt:unstructured" text="Inter" value="Inter"/>
+                              </items>
+                           </headerFontTabs>
                            <headerColorTabs cq-msm-lockable="./headerColorTabs"
                                             fieldLabel="Header Color"
                                             jcr:primaryType="nt:unstructured"

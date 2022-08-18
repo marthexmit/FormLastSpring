@@ -43,12 +43,58 @@
       ],
       "properties": [
         {
+          
           "field": "headerType",
-          "label": "Type Header",
-          "type": "textfield",
+          "label": "Header Type",
+          "type": "select",
           "json-expose": true,
-          "json-property": "headerType"
+          "json-property": "headerType",
+          "items": [
+            {
+              "field": "h1",
+              "attributes": {
+                "text": "h1",
+                "value": "h1"
+              }
+            },
+            {
+              "field": "h2",
+              "attributes": {
+                "text": "h2",
+                "value": "h2"
+              }
+            },
+            {
+              "field": "h3",
+              "attributes": {
+                "text": "h3",
+                "value": "h3"
+              }
+            },
+            {
+              "field": "h4",
+              "attributes": {
+                "text": "h4",
+                "value": "h4"
+              }
+            },
+            {
+              "field": "h5",
+              "attributes": {
+                "text": "h5",
+                "value": "h5"
+              }
+            },
+            {
+              "field": "h6",
+              "attributes": {
+                "text": "h6",
+                "value": "h6"
+              }
+            }
+          ]
         },
+        
         {
           "field": "headerText",
           "label": "Header Text",
@@ -59,9 +105,32 @@
         {
           "field": "headerFont",
           "label": "Header Font",
-          "type": "textfield",
+          "type": "select",
           "json-expose": true,
-          "json-property": "headerFont"
+          "json-property": "headerFont",
+          "items": [
+            {
+              "field": "Incosolata",
+              "attributes": {
+                "text": "Incosolata",
+                "value": "Incosolata"
+              }
+            },
+            {
+              "field": "Nunito",
+              "attributes": {
+                "text": "Nunito",
+                "value": "Nunito"
+              }
+            },
+            {
+              "field": "Inter",
+              "attributes": {
+                "text": "Inter",
+                "value": "Inter"
+              }
+            }
+          ]
         },
         {
             "field": "headerColor",
@@ -73,23 +142,83 @@
         {
           "field": "headerTypeTabs",
           "label": "Header Type",
-          "type": "textfield",
+          "type": "select",
           "json-expose": true,
-          "json-property": "headerTypeTabs"
-        },
-        {
-          "field": "headerTextTabs",
-          "label": "Header Text",
-          "type": "textfield",
-          "json-expose": true,
-          "json-property": "headerTextTabs"
+          "json-property": "headerTypeTabs",
+          "items": [
+            {
+              "field": "h1",
+              "attributes": {
+                "text": "h1",
+                "value": "h1"
+              }
+            },
+            {
+              "field": "h2",
+              "attributes": {
+                "text": "h2",
+                "value": "h2"
+              }
+            },
+            {
+              "field": "h3",
+              "attributes": {
+                "text": "h3",
+                "value": "h3"
+              }
+            },
+            {
+              "field": "h4",
+              "attributes": {
+                "text": "h4",
+                "value": "h4"
+              }
+            },
+            {
+              "field": "h5",
+              "attributes": {
+                "text": "h5",
+                "value": "h5"
+              }
+            },
+            {
+              "field": "h6",
+              "attributes": {
+                "text": "h6",
+                "value": "h6"
+              }
+            }
+          ]
         },
         {
           "field": "headerFontTabs",
           "label": "Header Font",
-          "type": "textfield",
+          "type": "select",
           "json-expose": true,
-          "json-property": "headerFontTabs"
+          "json-property": "headerFontTabs",
+          "items": [
+            {
+              "field": "Incosolata",
+              "attributes": {
+                "text": "Incosolata",
+                "value": "Incosolata"
+              }
+            },
+            {
+              "field": "Nunito",
+              "attributes": {
+                "text": "Nunito",
+                "value": "Nunito"
+              }
+            },
+            {
+              "field": "Inter",
+              "attributes": {
+                "text": "Inter",
+                "value": "Inter"
+              }
+            }
+          ]
         },
         {
           "field": "headerColorTabs",

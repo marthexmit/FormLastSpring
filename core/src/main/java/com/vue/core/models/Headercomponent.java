@@ -48,9 +48,6 @@ public interface Headercomponent
     @JsonProperty("headerTypeTabs")
     String getHeaderTypeTabs();
 
-    @JsonProperty("headerTextTabs")
-    String getHeaderTextTabs();
-
     @JsonProperty("headerFontTabs")
     String getHeaderFontTabs();
 

@@ -52,8 +52,6 @@ public class HeadercomponentImpl
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
     private String headerTypeTabs;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String headerTextTabs;
-    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
     private String headerFontTabs;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
     private String headerColorTabs;
@@ -88,12 +86,6 @@ public class HeadercomponentImpl
     @JsonProperty("headerTypeTabs")
     public String getHeaderTypeTabs() {
         return headerTypeTabs;
-    }
-
-    @Override
-    @JsonProperty("headerTextTabs")
-    public String getHeaderTextTabs() {
-        return headerTextTabs;
     }
 
     @Override

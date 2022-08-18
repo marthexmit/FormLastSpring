@@ -45,7 +45,64 @@ public interface Tabs
     @JsonProperty("FontSize")
     Long getFontSize();
 
-    @JsonProperty("InputStyle")
-    String getInputStyle();
+    @JsonProperty("FullNamePlaceholder")
+    String getFullNamePlaceholder();
+
+    @JsonProperty("FullNameLabel")
+    String getFullNameLabel();
+
+    @JsonProperty("NicknamePlaceholder")
+    String getNicknamePlaceholder();
+
+    @JsonProperty("NicknameLabel")
+    String getNicknameLabel();
+
+    @JsonProperty("EmailPlaceholder")
+    String getEmailPlaceholder();
+
+    @JsonProperty("EmailLabel")
+    String getEmailLabel();
+
+    @JsonProperty("PhonePlaceholder")
+    String getPhonePlaceholder();
+
+    @JsonProperty("PhoneLabel")
+    String getPhoneLabel();
+
+    @JsonProperty("LinkedinPlaceholder")
+    String getLinkedinPlaceholder();
+
+    @JsonProperty("LinkedinLabel")
+    String getLinkedinLabel();
+
+    @JsonProperty("GithubPlaceholder")
+    String getGithubPlaceholder();
+
+    @JsonProperty("GithubLabel")
+    String getGithubLabel();
+
+    @JsonProperty("CertificatesPlaceholder")
+    String getCertificatesPlaceholder();
+
+    @JsonProperty("CertificatesLabel")
+    String getCertificatesLabel();
+
+    @JsonProperty("TeamNamePlaceholder")
+    String getTeamNamePlaceholder();
+
+    @JsonProperty("TeamNameLabel")
+    String getTeamNameLabel();
+
+    @JsonProperty("InstitutionPlaceholder")
+    String getInstitutionPlaceholder();
+
+    @JsonProperty("InstitutionLabel")
+    String getInstitutionLabel();
+
+    @JsonProperty("GraduationPlaceholder")
+    String getGraduationPlaceholder();
+
+    @JsonProperty("GraduationLabel")
+    String getGraduationLabel();
 
 }

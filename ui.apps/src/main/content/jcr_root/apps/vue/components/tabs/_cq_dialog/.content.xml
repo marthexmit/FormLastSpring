@@ -22,7 +22,7 @@
           xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
           xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
           jcr:primaryType="nt:unstructured"
-          jcr:title="Vue - Form Tabs"
+          jcr:title="Form"
           sling:resourceType="cq/gui/components/authoring/dialog">
    <content jcr:primaryType="nt:unstructured"
             sling:resourceType="granite/ui/components/coral/foundation/container">
@@ -31,7 +31,7 @@
                sling:resourceType="granite/ui/components/coral/foundation/tabs">
             <items jcr:primaryType="nt:unstructured">
                <general jcr:primaryType="nt:unstructured"
-                        jcr:title="Gerais"
+                        jcr:title="General"
                         sling:resourceType="granite/ui/components/coral/foundation/container">
                   <layout jcr:primaryType="nt:unstructured"
                           sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
@@ -40,13 +40,13 @@
                              sling:resourceType="granite/ui/components/coral/foundation/container">
                         <items jcr:primaryType="nt:unstructured">
                            <FormTitle cq-msm-lockable="./FormTitle"
-                                      fieldLabel="Título do Formulário"
+                                      fieldLabel="Title Form Text"
                                       jcr:primaryType="nt:unstructured"
                                       name="./FormTitle"
                                       sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
                            <FontType cq-msm-lockable="./FontType"
                                      defaultValue="Nunito"
-                                     fieldLabel="Fonte para os textos do formulário"
+                                     fieldLabel="Fonte Type"
                                      jcr:primaryType="nt:unstructured"
                                      name="./FontType"
                                      sling:resourceType="granite/ui/components/coral/foundation/form/select"
@@ -63,12 +63,12 @@
                               </items>
                            </FontType>
                            <FontColor cq-msm-lockable="./FontColor"
-                                      fieldLabel="Cor dos textos do formulário"
+                                      fieldLabel="Color Texts"
                                       jcr:primaryType="nt:unstructured"
                                       name="./FontColor"
                                       sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"/>
                            <FontSize cq-msm-lockable="./FontSize"
-                                     fieldLabel="Tamanho dos textos do formulário"
+                                     fieldLabel="Fontsize Texts"
                                      jcr:primaryType="nt:unstructured"
                                      max="{Double}32"
                                      min="{Double}8"
@@ -76,24 +76,6 @@
                                      sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
                                      step="1"
                                      value="{Long}16"/>
-                           <InputStyle cq-msm-lockable="./InputStyle"
-                                       defaultValue="primary"
-                                       fieldLabel="Estilo para os inputs do formulário"
-                                       jcr:primaryType="nt:unstructured"
-                                       name="./InputStyle"
-                                       sling:resourceType="granite/ui/components/coral/foundation/form/select"
-                                       value="primary">
-                              <items jcr:primaryType="nt:unstructured">
-                                 <primary jcr:primaryType="nt:unstructured"
-                                          selected="true"
-                                          text="Primário"
-                                          value="primary"/>
-                                 <secondary jcr:primaryType="nt:unstructured"
-                                            text="Secundário"
-                                            value="secondary"/>
-                                 <terciary jcr:primaryType="nt:unstructured" text="Terciário" value="terciary"/>
-                              </items>
-                           </InputStyle>
                         </items>
                      </column>
                   </items>
@@ -106,7 +88,48 @@
                   <items jcr:primaryType="nt:unstructured">
                      <column jcr:primaryType="nt:unstructured"
                              sling:resourceType="granite/ui/components/coral/foundation/container">
-                        <items jcr:primaryType="nt:unstructured"/>
+                        <items jcr:primaryType="nt:unstructured">
+                           <FullNamePlaceholder cq-msm-lockable="./FullNamePlaceholder"
+                                                fieldLabel="FullName Place Text"
+                                                jcr:primaryType="nt:unstructured"
+                                                name="./FullNamePlaceholder"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <FullNameLabel cq-msm-lockable="./FullNameLabel"
+                                          fieldLabel="FullName Label Text"
+                                          jcr:primaryType="nt:unstructured"
+                                          name="./FullNameLabel"
+                                          sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <NicknamePlaceholder cq-msm-lockable="./NicknamePlaceholder"
+                                                fieldLabel="Nickname Place Text"
+                                                jcr:primaryType="nt:unstructured"
+                                                name="./NicknamePlaceholder"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <NicknameLabel cq-msm-lockable="./NicknameLabel"
+                                          fieldLabel="Nickname Label Text"
+                                          jcr:primaryType="nt:unstructured"
+                                          name="./NicknameLabel"
+                                          sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <EmailPlaceholder cq-msm-lockable="./EmailPlaceholder"
+                                             fieldLabel="Email Place Text"
+                                             jcr:primaryType="nt:unstructured"
+                                             name="./EmailPlaceholder"
+                                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <EmailLabel cq-msm-lockable="./EmailLabel"
+                                       fieldLabel="Email Label Text"
+                                       jcr:primaryType="nt:unstructured"
+                                       name="./EmailLabel"
+                                       sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <PhonePlaceholder cq-msm-lockable="./PhonePlaceholder"
+                                             fieldLabel="Phone Place Text"
+                                             jcr:primaryType="nt:unstructured"
+                                             name="./PhonePlaceholder"
+                                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <PhoneLabel cq-msm-lockable="./PhoneLabel"
+                                       fieldLabel="Phone Label Text"
+                                       jcr:primaryType="nt:unstructured"
+                                       name="./PhoneLabel"
+                                       sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                        </items>
                      </column>
                   </items>
                </basic>
@@ -118,7 +141,28 @@
                   <items jcr:primaryType="nt:unstructured">
                      <column jcr:primaryType="nt:unstructured"
                              sling:resourceType="granite/ui/components/coral/foundation/container">
-                        <items jcr:primaryType="nt:unstructured"/>
+                        <items jcr:primaryType="nt:unstructured">
+                           <LinkedinPlaceholder cq-msm-lockable="./LinkedinPlaceholder"
+                                                fieldLabel="Linkedin Place Text"
+                                                jcr:primaryType="nt:unstructured"
+                                                name="./LinkedinPlaceholder"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <LinkedinLabel cq-msm-lockable="./LinkedinLabel"
+                                          fieldLabel="Linkedin Label Text"
+                                          jcr:primaryType="nt:unstructured"
+                                          name="./LinkedinLabel"
+                                          sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <GithubPlaceholder cq-msm-lockable="./GithubPlaceholder"
+                                              fieldLabel="Github Place Text"
+                                              jcr:primaryType="nt:unstructured"
+                                              name="./GithubPlaceholder"
+                                              sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <GithubLabel cq-msm-lockable="./GithubLabel"
+                                        fieldLabel="Github Label Text"
+                                        jcr:primaryType="nt:unstructured"
+                                        name="./GithubLabel"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                        </items>
                      </column>
                   </items>
                </social>
@@ -130,7 +174,48 @@
                   <items jcr:primaryType="nt:unstructured">
                      <column jcr:primaryType="nt:unstructured"
                              sling:resourceType="granite/ui/components/coral/foundation/container">
-                        <items jcr:primaryType="nt:unstructured"/>
+                        <items jcr:primaryType="nt:unstructured">
+                           <CertificatesPlaceholder cq-msm-lockable="./CertificatesPlaceholder"
+                                                    fieldLabel="Certificates Place Text"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    name="./CertificatesPlaceholder"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <CertificatesLabel cq-msm-lockable="./CertificatesLabel"
+                                              fieldLabel="Certificates Label Text"
+                                              jcr:primaryType="nt:unstructured"
+                                              name="./CertificatesLabel"
+                                              sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <TeamNamePlaceholder cq-msm-lockable="./TeamNamePlaceholder"
+                                                fieldLabel="TeamName Place Text"
+                                                jcr:primaryType="nt:unstructured"
+                                                name="./TeamNamePlaceholder"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <TeamNameLabel cq-msm-lockable="./TeamNameLabel"
+                                          fieldLabel="TeamName Label Text"
+                                          jcr:primaryType="nt:unstructured"
+                                          name="./TeamNameLabel"
+                                          sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <InstitutionPlaceholder cq-msm-lockable="./InstitutionPlaceholder"
+                                                   fieldLabel="Institution Place Text"
+                                                   jcr:primaryType="nt:unstructured"
+                                                   name="./InstitutionPlaceholder"
+                                                   sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <InstitutionLabel cq-msm-lockable="./InstitutionLabel"
+                                             fieldLabel="Institution Label Text"
+                                             jcr:primaryType="nt:unstructured"
+                                             name="./InstitutionLabel"
+                                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <GraduationPlaceholder cq-msm-lockable="./GraduationPlaceholder"
+                                                  fieldLabel="Graduation Place Text"
+                                                  jcr:primaryType="nt:unstructured"
+                                                  name="./GraduationPlaceholder"
+                                                  sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <GraduationLabel cq-msm-lockable="./GraduationLabel"
+                                            fieldLabel="Graduation Label Text"
+                                            jcr:primaryType="nt:unstructured"
+                                            name="./GraduationLabel"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                        </items>
                      </column>
                   </items>
                </certificates>

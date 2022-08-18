@@ -50,7 +50,45 @@ public class TabsImpl
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
     private Long FontSize;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
-    private String InputStyle;
+    private String FullNamePlaceholder;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String FullNameLabel;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String NicknamePlaceholder;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String NicknameLabel;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String EmailPlaceholder;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String EmailLabel;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String PhonePlaceholder;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String PhoneLabel;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String LinkedinPlaceholder;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String LinkedinLabel;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String GithubPlaceholder;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String GithubLabel;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String CertificatesPlaceholder;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String CertificatesLabel;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String TeamNamePlaceholder;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String TeamNameLabel;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String InstitutionPlaceholder;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String InstitutionLabel;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String GraduationPlaceholder;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String GraduationLabel;
     @SlingObject
     private Resource resource;
 
@@ -79,9 +117,123 @@ public class TabsImpl
     }
 
     @Override
-    @JsonProperty("InputStyle")
-    public String getInputStyle() {
-        return InputStyle;
+    @JsonProperty("FullNamePlaceholder")
+    public String getFullNamePlaceholder() {
+        return FullNamePlaceholder;
+    }
+
+    @Override
+    @JsonProperty("FullNameLabel")
+    public String getFullNameLabel() {
+        return FullNameLabel;
+    }
+
+    @Override
+    @JsonProperty("NicknamePlaceholder")
+    public String getNicknamePlaceholder() {
+        return NicknamePlaceholder;
+    }
+
+    @Override
+    @JsonProperty("NicknameLabel")
+    public String getNicknameLabel() {
+        return NicknameLabel;
+    }
+
+    @Override
+    @JsonProperty("EmailPlaceholder")
+    public String getEmailPlaceholder() {
+        return EmailPlaceholder;
+    }
+
+    @Override
+    @JsonProperty("EmailLabel")
+    public String getEmailLabel() {
+        return EmailLabel;
+    }
+
+    @Override
+    @JsonProperty("PhonePlaceholder")
+    public String getPhonePlaceholder() {
+        return PhonePlaceholder;
+    }
+
+    @Override
+    @JsonProperty("PhoneLabel")
+    public String getPhoneLabel() {
+        return PhoneLabel;
+    }
+
+    @Override
+    @JsonProperty("LinkedinPlaceholder")
+    public String getLinkedinPlaceholder() {
+        return LinkedinPlaceholder;
+    }
+
+    @Override
+    @JsonProperty("LinkedinLabel")
+    public String getLinkedinLabel() {
+        return LinkedinLabel;
+    }
+
+    @Override
+    @JsonProperty("GithubPlaceholder")
+    public String getGithubPlaceholder() {
+        return GithubPlaceholder;
+    }
+
+    @Override
+    @JsonProperty("GithubLabel")
+    public String getGithubLabel() {
+        return GithubLabel;
+    }
+
+    @Override
+    @JsonProperty("CertificatesPlaceholder")
+    public String getCertificatesPlaceholder() {
+        return CertificatesPlaceholder;
+    }
+
+    @Override
+    @JsonProperty("CertificatesLabel")
+    public String getCertificatesLabel() {
+        return CertificatesLabel;
+    }
+
+    @Override
+    @JsonProperty("TeamNamePlaceholder")
+    public String getTeamNamePlaceholder() {
+        return TeamNamePlaceholder;
+    }
+
+    @Override
+    @JsonProperty("TeamNameLabel")
+    public String getTeamNameLabel() {
+        return TeamNameLabel;
+    }
+
+    @Override
+    @JsonProperty("InstitutionPlaceholder")
+    public String getInstitutionPlaceholder() {
+        return InstitutionPlaceholder;
+    }
+
+    @Override
+    @JsonProperty("InstitutionLabel")
+    public String getInstitutionLabel() {
+        return InstitutionLabel;
+    }
+
+    @Override
+    @JsonProperty("GraduationPlaceholder")
+    public String getGraduationPlaceholder() {
+        return GraduationPlaceholder;
+    }
+
+    @Override
+    @JsonProperty("GraduationLabel")
+    public String getGraduationLabel() {
+        return GraduationLabel;
     }
 
     @Override
