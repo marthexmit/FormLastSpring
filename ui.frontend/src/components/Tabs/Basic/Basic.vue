@@ -53,7 +53,7 @@
     <Birthday />
     <fieldset class="form-footer">
       <Checkbox />
-      <ButtonComponent type="0" Btext="Next" :clickButton="nextTab" />
+      <ButtonComponent type="0" Btext="Next" :clickButton="validate" />
     </fieldset>
   </form>
 </template>
@@ -64,6 +64,7 @@ import Checkbox from '@/components/FormFields/Checkbox/Checkbox.vue'
 import Birthday from '@/components/FormFields/Birthday/Birthday.vue'
 import { mapActions } from 'vuex'
 import ButtonComponent from '@/components/Micro/Button/Button.vue'
+import Patterns from '@/Validations.js'
 export default {
   name: 'Basic',
   components: {
@@ -124,6 +125,59 @@ export default {
     ...mapActions(['nextTab']),
     setInputValue (field) {
       return localStorage.getItem(field) ? localStorage.getItem(field) : ''
+    },
+    validate () {
+      const invalids = ['fullname', 'nickname', 'email', 'phone', 'birthday', 'checkbox'].filter((field) => {
+        if (field === 'birthday') {
+          const error = document.querySelector('.labelBirthday > span')
+          if (
+            localStorage.getItem('day') && localStorage.getItem('month') && localStorage.getItem('year')
+          ) {
+            error.style.visibility = 'hidden'
+          } else {
+            error.style.visibility = 'visible'
+            return field
+          }
+        } else if (field === 'checkbox') {
+          const error = document.querySelector('#main-check > #validation-checkbox')
+          if (!JSON.parse(localStorage.getItem('terms'))) {
+            error.style.display = 'block'
+            error.children[0].style.visibility = 'visible'
+            return field
+          } else {
+            error.style.display = 'none'
+            error.children[0].style.visibility = 'hidden'
+          }
+        } else {
+          console.log('nem birthday nem checkbox')
+          const value = document.querySelector(`.${field} > input`).value
+          const error = document.querySelector(`.${field} > span`)
+          if (!Patterns[field].test(value)) {
+            if (field === 'nickname' || field === 'phone') {
+              if (value !== '') {
+                return field
+              } else {
+                error.style.visibility = 'hidden'
+              }
+            } else {
+              return field
+            }
+          } else {
+            error.style.visibility = 'hidden'
+          }
+        }
+      })
+
+      if (invalids.length) {
+        invalids.forEach((field) => {
+          if (field !== 'birthday' && field !== 'checkbox') {
+            const error = document.querySelector(`.${field} > span`)
+            error.style.visibility = 'visible'
+          }
+        })
+      } else {
+        this.nextTab()
+      }
     }
   }
 }

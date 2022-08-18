@@ -7,7 +7,12 @@
       <TextComponent v-if="this.birthday" cText='Birthday: ' :newtext="this.birthday"/>
       <TextComponent v-if="this.age" cText="Age: " :newtext="this.age" />
       <TextComponent v-if="this.github" cText="Github: " :newtext="this.github" />
-      <TextComponent v-if="this.certificates" cText="Certificates: " :newtext="this.certificates" />
+      <div class="certificates-presentation">
+        <TextComponent v-if="this.certificates" cText="Certificates: " />
+        <div v-if="this.certificates">
+          <TextComponent v-for="(certificate, i) in getCertificatesList()" :key="i" :newtext="certificate" />
+        </div>
+      </div>
       <TextComponent v-if="this.teamname" cText="Teamname: " :newtext="this.teamname" />
       <TextComponent v-if="this.institution" cText="Institution: " :newtext="this.institution" />
       <TextComponent v-if="this.graduation" cText="Graduation: "  :newtext="this.graduation" />
@@ -46,6 +51,9 @@ export default {
       localStorage.clear()
       this.$store.state.abledTabs = ['basic']
       this.$store.state.actualTab = 'basic'
+    },
+    getCertificatesList () {
+      return JSON.parse(localStorage.getItem('certificates'))
     }
   }
 }

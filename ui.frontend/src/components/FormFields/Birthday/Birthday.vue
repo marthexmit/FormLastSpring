@@ -2,7 +2,7 @@
     <div class="birthday-container">
         <div class="labelBirthday">
             <Label>Birthday</Label>
-            <!-- <TextComponent text="Please enter your Age" className="mediumLowSize error" id="errorBirthday" /> -->
+            <Span>Please enter your Age</Span>
         </div>
         <div class="datesBody">
             <div class="daySelect">
@@ -52,12 +52,14 @@
 
 <script>
 import Label from '@/components/Micro/Label/Label.vue'
+import Span from '@/components/Micro/Span/Span.vue'
 // import TextComponent from '@/components/Micro/TextComponent/TextComponent.vue'
 export default {
   // eslint-disable-next-line
   name: "Birthday",
   components: {
-    Label
+    Label,
+    Span
     // TextComponent
   },
   data () {

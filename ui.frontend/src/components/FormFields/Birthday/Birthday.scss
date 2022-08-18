@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Montserrat&family=Space+Mono&family=Nunito&family=Roboto&display=swap');
 
 .birthday-container {
     width: 100%;
     margin: 10px 60px 0px 56px;
+    font-family: 'Nunito', sans-serif;
 
     .labelBirthday {
         display: flex;

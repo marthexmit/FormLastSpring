@@ -8,16 +8,19 @@
       </div>
     </label>
     <div id="validation-checkbox" style="display: none">
-      Please confirm the terms
+      <Span>Please confirm the terms</Span>
     </div>
   </div>
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import Span from '@/components/Micro/Span/Span.vue'
 export default {
   // eslint-disable-next-line
   name: "Checkbox",
+  components: {
+    Span
+  },
   data () {
     return {
       status: null
@@ -32,13 +35,11 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['setCheckbox']),
-
     getValue (e) {
       if (e.target.checked) {
-        this.setCheckbox(true)
+        localStorage.setItem('terms', true)
       } else {
-        this.setCheckbox(false)
+        localStorage.setItem('terms', false)
       }
     }
   }
