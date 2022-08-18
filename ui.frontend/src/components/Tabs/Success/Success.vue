@@ -4,7 +4,7 @@
       <TextComponent id="title" newtext="Your data has been sent successfully!" />
       <TextComponent v-if="this.fullname" cText='Full Name: ' :newtext="this.fullname" />
       <TextComponent v-if="this.email" cText='Email: ' :newtext="this.email" />
-      <TextComponent v-if="this.birthday" cText='Birthday: ' :newtext="this.birthday"/>
+      <TextComponent v-if="this.birthday" cText='Birthday: ' :newtext="this.birthday" />
       <TextComponent v-if="this.age" cText="Age: " :newtext="this.age" />
       <TextComponent v-if="this.github" cText="Github: " :newtext="this.github" />
       <div class="certificates-presentation">
@@ -15,10 +15,10 @@
       </div>
       <TextComponent v-if="this.teamname" cText="Teamname: " :newtext="this.teamname" />
       <TextComponent v-if="this.institution" cText="Institution: " :newtext="this.institution" />
-      <TextComponent v-if="this.graduation" cText="Graduation: "  :newtext="this.graduation" />
+      <TextComponent v-if="this.graduation" cText="Graduation: " :newtext="this.graduation" />
     </div>
     <div class="Breturn">
-    <ButtonComponent type="5" Btext="Return" :clickButton="clearLocalStorage" />
+      <ButtonComponent type="5" Btext="Return" :clickButton="clearLocalStorage" />
     </div>
   </div>
 
