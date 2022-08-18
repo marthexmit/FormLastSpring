@@ -29,8 +29,7 @@ export default {
       type: String
     },
     FieldSize: {
-      type: String,
-      default: '100%'
+      type: String
     },
     InputType: {
       type: String,

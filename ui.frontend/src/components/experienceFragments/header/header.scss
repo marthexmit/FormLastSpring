@@ -15,3 +15,12 @@
     }
     
 }
+@media (max-width: 768px) {
+    #divHeader {
+        width: 105vw;
+        .sectionTitle {
+            width: 101vw;
+            margin: 0px 0px 0px -62px;
+        }
+    }
+  }

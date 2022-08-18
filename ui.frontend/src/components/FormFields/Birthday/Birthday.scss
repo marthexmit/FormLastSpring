@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
 .birthday-container {
     width: 100%;
@@ -16,57 +16,85 @@
         display: flex;
         justify-content: space-between;
     }
-    .daySelect, .monthSelect, .yearSelect, .Age {
+    .daySelect,
+    .monthSelect,
+    .yearSelect,
+    .Age {
         display: flex;
         flex-direction: column;
-        width: 18%;
-       
+        min-width: 18%;
     }
-    .day, .month, .year {
-        font-family: 'Nunito', sans-serif;
+    .day,
+    .month,
+    .year {
+        font-family: "Nunito", sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 1em;
-        border: 2px solid #AAAAAA;
+        border: 2px solid #aaaaaa;
         border-radius: 4px;
         width: 100%;
         box-sizing: border-box;
-        color: #AAAAAA;
+        color: #aaaaaa;
         transition: color 0s 2147483647s;
         outline: none;
-        #optionDay,#optionMonth,#optionYear {
+        #optionDay,
+        #optionMonth,
+        #optionYear {
             color: black;
         }
     }
     select:focus,
     select:active,
-    select:focus{
+    select:focus {
         color: black;
-        transition:0s;
+        transition: 0s;
     }
-    
-    
+
     .age {
-        font-family:'Nunito',sans-serif;
+        font-family: "Nunito", sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 1em;
         border: 2px solid #aaaaaa;
         border-radius: 4px;
         color: #aaaaaa;
-        #ageId{
-        font-family: 'Nunito',sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        color: #000000;
-        font-size: 1em;
-        margin: 2px 0px 0px 5px;
-        
-       }
+        #ageId {
+            font-family: "Nunito", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            color: #000000;
+            font-size: 1em;
+            margin: 2px 0px 0px 5px;
+        }
     }
-    [contentEditable=false]:empty:not(:focus):before{
+    [contentEditable="false"]:empty:not(:focus):before {
         color: #aaaaaa;
-        content:attr(data-ph)
+        content: attr(data-ph);
     }
 }
-
+@media (max-width: 768px) {
+    .birthday-container {
+        margin: 0px;
+    }
+    .datesBody {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .daySelect {
+        order:0;
+        width: 100px;  
+    }
+    .monthSelect {
+        order: 1;
+        width: 100px;
+    }
+    .yearSelect {
+        order: 2;
+        width: 100px;
+    }
+    .Age {
+        order: 3;
+        width: 100px;
+    }
+}

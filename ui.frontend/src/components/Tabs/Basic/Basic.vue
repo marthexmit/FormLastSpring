@@ -37,7 +37,6 @@
                     :FontSize="FontSize"
                     :FontType="FontType"
                     :LabelContent="EmailLabel"
-                    FieldSize="60%"
                     />
       <DefaultField FieldClass="phone"
                     InputType="tel"
@@ -49,7 +48,6 @@
                     :FontSize="FontSize"
                     :FontType="FontType"
                     :LabelContent="PhoneLabel"
-                    FieldSize="33%"
                     />
     </div>
     <Birthday />
