@@ -8,6 +8,38 @@ form {
     justify-content: space-between;
     margin: 0px 50px 0px 55px;
     width: 100%;
+
+    .certificates {
+        position: relative;
+        display: inline-block;
+
+        .certificates-list {
+            position: absolute;
+            display: none;
+            background-color: #074EE8;
+            margin: 0;
+            width: 100%;
+            padding: 0;
+
+            .certificates-item {
+                list-style: none;
+                padding: 0;
+                display: grid;
+                grid-template-columns: 80% 20%;
+
+                span {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    color: white;
+                }
+            }
+        }
+
+        &:hover .certificates-list {
+            display: block;
+        }
+    }
 }
 .DivisionCertificate {
     width: 100%;
