@@ -130,7 +130,6 @@ export default {
   },
   computed: {
     getCertificatesList () {
-      // return localStorage.getItem('certificates').split(',')
       return this.certificates
     }
   },
@@ -140,9 +139,11 @@ export default {
       return localStorage.getItem(field) ? localStorage.getItem(field) : ''
     },
     addCertificate () {
-      this.certificates.push(localStorage.getItem('certificate'))
-      localStorage.setItem('certificates', JSON.stringify(this.certificates))
-      localStorage.setItem('certificate', '')
+      if (Patterns['certificate'].test(localStorage.getItem('certificate')) && this.certificates.length < 5) {
+        this.certificates.push(localStorage.getItem('certificate'))
+        localStorage.setItem('certificates', JSON.stringify(this.certificates))
+        localStorage.setItem('certificate', '')
+      }
     },
     removeCertificate (i) {
       this.certificates = this.certificates.filter((data, index) => index !== i)

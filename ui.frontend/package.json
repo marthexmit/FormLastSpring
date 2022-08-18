@@ -13,6 +13,8 @@
     "@mavice/aem-vue-editable-components": "^1.0.2",
     "core-js": "^3.6.5",
     "dompurify": "^2.2.6",
+    "jquery": "^3.6.0",
+    "jquery-mask-plugin": "^1.14.16",
     "sass": "^1.49.11",
     "vue": "^2.6.12",
     "vue-class-component": "^7.2.3",
