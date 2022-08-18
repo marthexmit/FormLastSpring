@@ -25,8 +25,8 @@
                    />
     <DefaultField FieldClass="institution"
                   InputType="text"
-                  Storage="teamname"
-                  :InputValue="setInputValue('teamname')"
+                  Storage="institution"
+                  :InputValue="setInputValue('institution')"
                   :InputPlaceholder="InstitutionPlaceholder"
                   :InvalidText="InstitutionInvalidText"
                   :FontColor="FontColor"
@@ -37,8 +37,8 @@
                    />
     <DefaultField FieldClass="graduation"
                   InputType="text"
-                  Storage="teamname"
-                  :InputValue="setInputValue('teamname')"
+                  Storage="graduation"
+                  :InputValue="setInputValue('graduation')"
                   :InputPlaceholder="GraduationPlaceholder"
                   :InvalidText="GraduationInvalidText"
                   :FontColor="FontColor"
