@@ -1,7 +1,7 @@
-.BclassBasic,.BclassSocial,.BclassCertificates {
+.BclassBasic,.BclassSocial,.BclassCertificates,.BclassCertificatesMore,.BclassCertificatesList {
     background-color: #074EE8;
     color: #FFFFFF;
-    width: 83px;
+    
     height: 40px;
     border-radius: 4px;
     font-weight: 400;
@@ -12,13 +12,22 @@
     outline: none;
 }
 .BclassBasic {
-margin: 60px 56px 0px 0px;
+    width: 83px;
+    margin: 60px 56px 0px 0px;
 }
 .BclassSocial {
+    width: 83px;
     margin: 0px 58px -8px 0px
 }
 .BclassCertificates {
-    margin: 0px 58px -8px 0px
+    width: 83px;
+    margin: 21px 58px -8px 0px;
+}
+.BclassCertificatesMore {
+    width: 83px;
+}
+BclassCertificatesList {
+    width: 10vw;
 }
 .BclassBasic:hover {
     background: rgb(7 78 232 / 90%);
@@ -28,4 +37,8 @@ margin: 60px 56px 0px 0px;
 }
 .BclassBclassCertificates:hover {
     background: rgb(7 78 232 / 90%);
+}
+.plus {
+    height: 11px;
+    width: 12px;
 }

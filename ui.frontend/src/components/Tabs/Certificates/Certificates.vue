@@ -1,5 +1,6 @@
 <template>
   <form>
+    <div class="DivisionCertificate">
     <DefaultField FieldClass="certificates"
                   InputType="text"
                   Storage="certificates"
@@ -11,6 +12,11 @@
                   :LabelContent="CertificatesLabel"
                   FieldSize="100%"
                    />
+    </div>
+    <div class="divisionButtonsCertificate">
+    <ButtonComponent type='4' Btext="Certificates" :clickButton="nextTab" />
+    <ButtonComponent type='3' Btext="More" :clickButton="nextTab" />
+    </div>
     <div class="DivisionAfterCertificate">
       <DefaultField FieldClass="teamname"
                     InputType="text"
