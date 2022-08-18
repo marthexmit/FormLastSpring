@@ -3,8 +3,8 @@
     <div class="DivisionCertificate">
     <DefaultField FieldClass="certificates"
                   InputType="text"
-                  Storage="certificates"
-                  :InputValue="setInputValue('certificates')"
+                  Storage="certificate"
+                  :InputValue="setInputValue('certificate')"
                   :InputPlaceholder="CertificatesPlaceholder"
                   :FontColor="FontColor"
                   :FontSize="FontSize"
@@ -14,8 +14,16 @@
                    />
     </div>
     <div class="divisionButtonsCertificate">
-    <ButtonComponent type='4' Btext="Certificates" :clickButton="nextTab" />
-    <ButtonComponent type='3' Btext="More" :clickButton="nextTab" />
+      <div class="certificates">
+        <ButtonComponent id="view-certificates-btn" type='4' Btext="Certificates" :clickButton="viewCertificates" />
+        <ul class="certificates-list">
+          <li v-for="(certificate, i) in getCertificatesList" :key="i" class="certificates-item">
+            <span>{{ certificate }}</span>
+            <button @click.prevent="removeCertificate(i)">X</button>
+          </li>
+        </ul>
+      </div>
+      <ButtonComponent type='3' Btext="More" :clickButton="addCertificate" />
     </div>
     <div class="DivisionAfterCertificate">
       <DefaultField FieldClass="teamname"
@@ -32,8 +40,8 @@
                     />
       <DefaultField FieldClass="institution"
                     InputType="text"
-                    Storage="teamname"
-                    :InputValue="setInputValue('teamname')"
+                    Storage="institution"
+                    :InputValue="setInputValue('institution')"
                     :InputPlaceholder="InstitutionPlaceholder"
                     :InvalidText="InstitutionInvalidText"
                     :FontColor="FontColor"
@@ -44,8 +52,8 @@
                     />
       <DefaultField FieldClass="graduation"
                     InputType="text"
-                    Storage="teamname"
-                    :InputValue="setInputValue('teamname')"
+                    Storage="graduation"
+                    :InputValue="setInputValue('graduation')"
                     :InputPlaceholder="GraduationPlaceholder"
                     :InvalidText="GraduationInvalidText"
                     :FontColor="FontColor"
@@ -113,15 +121,36 @@ export default {
       type: String
     }
   },
+  data () {
+    return {
+      certificate: '',
+      certificates: []
+    }
+  },
+  computed: {
+    getCertificatesList () {
+      // return localStorage.getItem('certificates').split(',')
+      return this.certificates
+    }
+  },
   methods: {
     ...mapActions(['nextTab']),
     setInputValue (field) {
       return localStorage.getItem(field) ? localStorage.getItem(field) : ''
+    },
+    addCertificate () {
+      this.certificates.push(localStorage.getItem('certificate'))
+      localStorage.setItem('certificates', JSON.stringify(this.certificates))
+      localStorage.setItem('certificate', '')
+    },
+    removeCertificate (i) {
+      this.certificates = this.certificates.filter((data, index) => index !== i)
+      localStorage.setItem('certificates', JSON.stringify(this.certificates))
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-@import './Certificate.scss'
+@import './Certificate.scss';
 </style>
