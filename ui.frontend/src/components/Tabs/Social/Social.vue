@@ -1,31 +1,32 @@
 <template>
   <form>
-    <DefaultField FieldClass="linkedin"
+    <div class="divisionInputsSocial">
+      <DefaultField FieldClass="linkedin"
                   InputType="text"
-                  Storage="linkedin"
-                  :InputValue="setInputValue('linkedin')"
-                  :InputPlaceholder="LinkedinPlaceholder"
-                  :InvalidText="LinkedinInvalidText"
-                  :FontColor="FontColor"
-                  :FontSize="FontSize"
-                  :FontType="FontType"
-                  :LabelContent="LinkedinLabel"
-                  FieldSize="100%"
-                   />
-    <DefaultField FieldClass="github"
-                  InputType="text"
-                  Storage="github"
-                  :InputValue="setInputValue('github')"
-                  :InputPlaceholder="GithubPlaceholder"
-                  :InvalidText="GithubInvalidText"
-                  :FontColor="FontColor"
-                  :FontSize="FontSize"
-                  :FontType="FontType"
-                  :LabelContent="GithubLabel"
-                  FieldSize="100%"
-                   />
-
-    <ButtonComponent Btext="Next" :clickButton="nextTab" />
+                    Storage="linkedin"
+                    :InputValue="setInputValue('linkedin')"
+                    :InputPlaceholder="LinkedinPlaceholder"
+                    :InvalidText="LinkedinInvalidText"
+                    :FontColor="FontColor"
+                    :FontSize="FontSize"
+                    :FontType="FontType"
+                    :LabelContent="LinkedinLabel"
+                    FieldSize="100%"
+                    />
+      <DefaultField FieldClass="github"
+                    InputType="text"
+                    Storage="github"
+                    :InputValue="setInputValue('github')"
+                    :InputPlaceholder="GithubPlaceholder"
+                    :InvalidText="GithubInvalidText"
+                    :FontColor="FontColor"
+                    :FontSize="FontSize"
+                    :FontType="FontType"
+                    :LabelContent="GithubLabel"
+                    FieldSize="100%"
+                    />
+    </div>
+    <ButtonComponent type="1" Btext="Next" :clickButton="nextTab" />
   </form>
 </template>
 
@@ -78,5 +79,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+@import './Social.scss'
 </style>

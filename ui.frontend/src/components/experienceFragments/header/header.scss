@@ -3,6 +3,10 @@
     max-height: 15vh;
     width: 100vw;
     background-color: #ECEEF2;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     .sectionTitle{
         display: flex;
         flex-direction: column;

@@ -2,12 +2,17 @@ main {
   margin: 0;
   background-color: #ECEEF2;
   max-height: 87vh;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .card {
   display: flex;
   flex-direction: column;
   width: 40vw;
-  height: 85vh;
+  min-height: 85vh;
+  max-height: 85vh;
   border-radius: 20px;
   background: #FFFFFF;
   margin-top: 13px;
