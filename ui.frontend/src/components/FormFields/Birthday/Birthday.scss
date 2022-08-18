@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
 .birthday-container {
     width: 100%;
     margin: 10px 60px 0px 56px;
@@ -21,7 +23,7 @@
        
     }
     .day, .month, .year {
-        font-family: 'Nunito';
+        font-family: 'Nunito', sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 1em;
@@ -45,7 +47,7 @@
     
     
     .age {
-        font-family: "Nunito";
+        font-family:'Nunito',sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 1em;
@@ -53,7 +55,7 @@
         border-radius: 4px;
         color: #aaaaaa;
         #ageId{
-        font-family: "Nunito";
+        font-family: 'Nunito',sans-serif;
         font-style: normal;
         font-weight: 400;
         color: #000000;

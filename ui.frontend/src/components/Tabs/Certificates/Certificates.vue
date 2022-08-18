@@ -49,7 +49,7 @@
                     FieldSize="100%"
                     />
       </div>
-    <ButtonComponent type='3' Btext="Finish" :clickButton="nextTab" />
+    <ButtonComponent type='2' Btext="Finish" :clickButton="nextTab" />
   </form>
 </template>
 

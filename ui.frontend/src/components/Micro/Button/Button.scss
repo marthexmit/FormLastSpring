@@ -1,4 +1,4 @@
-.BclassBasic, .BclassBasic3 {
+.BclassBasic,.BclassSocial,.BclassCertificates {
     background-color: #074EE8;
     color: #FFFFFF;
     width: 83px;
@@ -7,14 +7,25 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 18px;
-    margin: 60px 58px 0px 0px;
     border: none;
     cursor: pointer;
     outline: none;
 }
-.BclassBasic:hover {
-background: rgb(7 78 232 / 90%);
+.BclassBasic {
+margin: 60px 56px 0px 0px;
 }
-.BclassBasic3:hover {
+.BclassSocial {
+    margin: 0px 58px -8px 0px
+}
+.BclassCertificates {
+    margin: 0px 58px -8px 0px
+}
+.BclassBasic:hover {
+    background: rgb(7 78 232 / 90%);
+}   
+.BclassSocial:hover {
+    background: rgb(7 78 232 / 90%);
+}
+.BclassBclassCertificates:hover {
     background: rgb(7 78 232 / 90%);
 }

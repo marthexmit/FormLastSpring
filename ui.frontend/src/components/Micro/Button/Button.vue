@@ -1,6 +1,7 @@
 <template>
   <button  class="BclassBasic"  v-if="type === '0'" :style="{ 'font-family': fontFamilyButton, 'background-color': backColorButton, 'color': colorFieldButton}" @click.prevent="clickButton">{{ Btext }} <img src="/content/dam/vue/VectorSetaDireita.png" alt="next image" /></button>
-  <button  class="BclassBasic3"  v-else-if="type === '3'" :style="{ 'font-family': fontFamilyButton, 'background-color': backColorButton, 'color': colorFieldButton}" @click.prevent="clickButton"> <img src="/content/dam/vue/CertinFinish.png" alt="next image" /> {{ Btext }}</button>
+  <button  class="BclassSocial"  v-else-if="type === '1'" :style="{ 'font-family': fontFamilyButton, 'background-color': backColorButton, 'color': colorFieldButton}" @click.prevent="clickButton">{{ Btext }} <img src="/content/dam/vue/VectorSetaDireita.png" alt="next image" /></button>
+  <button  class="BclassCertificates"  v-else-if="type === '2'" :style="{ 'font-family': fontFamilyButton, 'background-color': backColorButton, 'color': colorFieldButton}" @click.prevent="clickButton"> <img src="/content/dam/vue/CertinFinish.png" alt="next image" /> {{ Btext }}</button>
 </template>
 
 <script>
