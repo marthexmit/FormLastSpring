@@ -24,7 +24,7 @@
                     :LabelContent="GithubLabel"
                     />
     </div>
-    <ButtonComponent type="1" Btext="Next" :clickButton="nextTab" />
+    <ButtonComponent type="1" Btext="Next" :clickButton="validate" />
   </form>
 </template>
 
@@ -32,6 +32,7 @@
 import DefaultField from '@/components/FormFields/DefaultField/DefaultField.vue'
 import { mapActions } from 'vuex'
 import ButtonComponent from '@/components/Micro/Button/Button.vue'
+import Patterns from '@/Validations.js'
 export default {
   name: 'Social',
   components: {
@@ -71,11 +72,39 @@ export default {
     ...mapActions(['nextTab']),
     setInputValue (field) {
       return localStorage.getItem(field) ? localStorage.getItem(field) : ''
+    },
+    validate () {
+      const invalids = ['github', 'linkedin'].filter((field) => {
+        const value = document.querySelector(`.${field} > input`).value
+        const error = document.querySelector(`.${field} > span`)
+        if (!Patterns[field].test(value)) {
+          if (field === 'linkedin') {
+            if (value !== '') {
+              return field
+            } else {
+              error.style.visibility = 'hidden'
+            }
+          } else {
+            return field
+          }
+        } else {
+          error.style.visibility = 'hidden'
+        }
+      })
+
+      if (invalids.length) {
+        invalids.filter((field) => {
+          const error = document.querySelector(`.${field} > span`)
+          error.style.visibility = 'visible'
+        })
+      } else {
+        this.nextTab()
+      }
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-@import './Social.scss'
+@import './Social.scss';
 </style>
